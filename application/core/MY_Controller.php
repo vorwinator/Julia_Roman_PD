@@ -4,7 +4,7 @@
         {
             parent::__construct();
         }
-        public function view($page_path, $page, $data){
+        public function render_page($page_path, $page, $data){
             $full_path=$page_path.$page;
             if ( ! file_exists('./application/views/'.$full_path.'.php'))
             {
