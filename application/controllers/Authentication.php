@@ -21,25 +21,18 @@
                     }
                     else
                     {
-                        $pass=$this->authentication->check_password();
+                        $pass=$this->authentication->check_password($this->input->post('email'));
     
-                        if($pass['password']!=md5($this->input->post('password'))){
+                        if($pass!=md5($this->input->post('password'))){
                             $data['info']="Podano nieprawidłowe dane logowania";
                             $this->load->view('login',$data);
                         }
                         else{
-                            $data['logged']=$this->authentication->get_acc_by_email();
-                            foreach($data['logged'] as $row){
-                                $_SESSION['id_acc_login']=$row['id_acc'];
-                                $_SESSION['email_login']=$row['email'];
-                                $_SESSION['firstname_login']=$row['firstname'];
-                                $_SESSION['lastname_login']=$row['lastname'];
-                                $_SESSION['acc_type_login']=$row['acc_type'];
-                            }
+                            $account=$this->authentication->get_acc_by_email($this->input->post('email'));
 
-                            $this->load->view('templates/header',$data);
-                            $this->load->view('client/mainpage',$data);
-                            $this->load->view('templates/footer',$data);
+                            $this->load->view('templates/header');
+                            $this->load->view('client/mainpage');
+                            $this->load->view('templates/footer');
                         }
                         
                     }
