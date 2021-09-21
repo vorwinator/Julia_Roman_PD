@@ -3,6 +3,8 @@
         public function construct()
         {
             parent::__construct();
+            $this->load->library(array('session','form_validation'));
+            $this->load->helper(array('url','form'));
         }
         public function render_page($page_path, $page, $data){
             $full_path=$page_path.$page;
