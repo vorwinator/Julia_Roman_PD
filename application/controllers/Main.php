@@ -7,6 +7,6 @@
         public function index(){
             $data['welcome'] = "To jest domek";
             
-            $this->render_page("pages/admin/", "index", $data);
+            $this->render_page("pages/", "index", $data);
         }
     }
