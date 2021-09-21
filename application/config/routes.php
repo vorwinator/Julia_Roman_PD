@@ -51,4 +51,5 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 */
 $route['default_controller'] = 'main/index';
 $route['account'] = 'account/index';
+$route['account/(:any)'] = 'account/$1';
 
