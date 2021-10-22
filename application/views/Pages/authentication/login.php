@@ -1,6 +1,6 @@
 <?php
     if(isset($info)) echo $info;
-    echo form_open(current_url());
+    echo form_open('authentication/login');
 
     echo form_input('email', set_value('email'), "placeholder='Email'");
 
