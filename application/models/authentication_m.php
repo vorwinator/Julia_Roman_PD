@@ -6,10 +6,10 @@
         }
 
         public function check_password($email){
-            $this->db->select('password')
+            $query = $this->db->select('password')
             ->from('account')
-            ->where('email', $email);
-            $query=$this->db->get();
+            ->where('email', $email)
+            ->get();
 
             if($query->num_rows() > 0){
                 $respond = $query->row();
@@ -21,11 +21,10 @@
         }
 
         public function get_acc_by_email($email){
-            $this->db->select('*')
+            $query = $this->db->select('*')
             ->from('account')
-            ->where('email', $email);
-            
-            $query=$this->db->get();
+            ->where('email', $email)
+            ->get();
 
             if($query->num_rows() > 0){
                 $respond = $query->row();
