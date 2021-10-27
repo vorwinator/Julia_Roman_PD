@@ -54,4 +54,5 @@ $route['main/(:any)'] = 'main/$1';
 $route['account'] = 'account/index';
 $route['account/(:any)'] = 'account/$1';
 $route['authentication/(:any)'] = 'authentication/$1';
+$route['car/(:any)'] = 'car/$1';
 
