@@ -20,4 +20,18 @@
 
 			return $this->db->insert('account', $data);
 		}
+		public function get_accounts()
+		{
+			$query = $this->db->select('id_acc, email, firstname, lastname, acc_type')
+			->from('account')
+			->get();
+
+			if($query->num_rows() > 0){
+                $respond = $query->result_array();
+            }else{
+                $respond = FALSE;
+            }
+    
+            return $respond;
+		}
     } 
