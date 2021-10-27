@@ -12,8 +12,8 @@
 
 			$data = array(
 				'email' => $this->input->post('email'),
-				'firstname' => $this->input->post('firstname'),
-				'lastname' => $this->input->post('lastname'),
+				'firstname' => ucfirst(strtolower($this->input->post('firstname'))),
+				'lastname' => ucfirst(strtolower($this->input->post('lastname'))),
 				'acc_type' => $this->input->post('acc_type'),
 				'password' => $hash_pass
 			);
