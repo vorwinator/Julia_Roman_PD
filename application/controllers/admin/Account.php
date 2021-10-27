@@ -29,11 +29,12 @@
 			else{
                 if($this->account_m->set_account()){
                     $data['info']="Dodano nowe konto";
+                    $this->render_page($this->directory_path, "accounts", $data);
                 } 
                 else{
                     $data['info']="Niepowodzenie";
+                    $this->render_page($this->directory_path, "create", $data);
                 }
-                $this->render_page($this->directory_path, "create", $data);
             }
         }
         public function accounts()
