@@ -24,7 +24,7 @@
         public function login(){
             if(isset($_SESSION['login_id_acc'])){
                 if($_SESSION['login_acc_type']==1){
-                    redirect('pages/admin/account/create');//temp
+                    redirect('admin/account/create');//temp
                 }
                 else{
                     redirect('main/index');//temp
