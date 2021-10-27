@@ -36,4 +36,11 @@
                 $this->render_page($this->directory_path, "create", $data);
             }
         }
+        public function accounts()
+        {
+            $data['welcome'] = "To jest lista kont";
+            $data['accounts'] = $this->account_m->get_accounts();
+            
+            $this->render_page($this->directory_path, "accounts", $data);
+        }
     }
