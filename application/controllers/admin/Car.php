@@ -27,6 +27,8 @@
 			$this->form_validation->set_rules('deposit', 'Kaucję', 'required');
 			$this->form_validation->set_rules('car_type', 'Typ auta', 'required');
 
+            $this->unit->run($this->form_validation->run(), TRUE, 'Czy wstawiono poprawne dane do formularza dodającego samochód.');
+
 			if ($this->form_validation->run() === FALSE)
 			{
                 $this->render_page($this->directory_path, 'create', '');

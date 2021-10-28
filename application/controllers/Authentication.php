@@ -15,6 +15,8 @@
             unset($_SESSION['login_lastname']);
             unset($_SESSION['login_acc_type']);
 
+            $this->unit->run(isset($_SESSION['login_acc_type']), FALSE, 'Czy pomyślnie wylogowano.');
+
             $data['info']="Pomyślnie wylogowano";
 
             $this->load->view('templates/header', $data);
@@ -33,6 +35,8 @@
             else{
                 $this->form_validation->set_rules('password', 'Hasło', 'required', array('required' => 'Musisz wpisać %s.'));
                 $this->form_validation->set_rules('email', 'Email', 'required|valid_email', array('required' => 'Musisz wpisać %s.', 'valid_email'=>'To nie jest poprawny %s.'));
+
+                $this->unit->run($this->form_validation->run(), TRUE, 'Czy wstawiono poprawne dane do formularza logowania.');
     
                 if ($this->form_validation->run() === FALSE)
                     {
@@ -50,9 +54,12 @@
                     {
                         $this->load->model('authentication_m');
                         $pass=$this->authentication_m->check_password($this->input->post('email'));
+
+                        $this->unit->run($pass->password!=md5($this->input->post('password')), FALSE, 'Czy podano prawidłowe hasło.');
     
                         if($pass->password!=md5($this->input->post('password'))){
                             $data['info']="Podano nieprawidłowe dane logowania";
+
                             $this->load->view('templates/header', $data);
                             $this->load->view('pages/authentication/login');
                             $this->load->view('templates/footer');
