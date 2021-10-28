@@ -50,4 +50,11 @@
                 }
             }
         }
+        public function cars()
+        {
+            $data['welcome'] = "To jest lista aut";
+            $data['cars'] = $this->car_m->get_cars_with_details();
+            
+            $this->render_page($this->directory_path, "cars", $data);
+        }
     }

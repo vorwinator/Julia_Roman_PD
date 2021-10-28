@@ -4,6 +4,8 @@
         {
             $this->load->database();
         }
+
+
         public function set_car()
 		{
 			$data = array(
@@ -15,6 +17,8 @@
 			);
 			return $this->db->insert('car', $data);
 		}
+
+
         public function set_car_details()
 		{
             $query = $this->db->query("SELECT max(id_car) AS id_car FROM car");
@@ -37,5 +41,23 @@
 			);
 
 			return $this->db->insert('car_details', $data);
+		}
+
+
+		public function get_cars_with_details()
+		{
+			$query = $this->db->select('*')
+			->from('car_details')
+			->join('car', 'car.id_car=car_details.id_car')
+			->get();
+
+			if($query->num_rows() > 0){
+                $respond = $query->result_array();
+            }else{
+                $respond = FALSE;
+            }
+
+			$this->unit->run($respond, 'is_array', 'Czy dane o samochodach są dostarczane w formie tabeli danych.');
+			return $respond;
 		}
     } 
