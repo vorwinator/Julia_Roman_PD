@@ -31,7 +31,8 @@
             }else{
                 $respond = FALSE;
             }
-    
+			
+			$this->unit->run($respond, 'is_array', 'Czy dane o kontach są dostarczane w formie tabeli danych.');
             return $respond;
 		}
     } 
