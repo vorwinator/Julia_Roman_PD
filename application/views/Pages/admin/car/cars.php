@@ -5,7 +5,12 @@
         echo $car['price_per_day']." | ";
         echo $car['mileage']." | ";
         echo $car['rental_status']." | ";
-        echo $car['insurance']."</br>";
+        echo $car['insurance']." | ";
+?>
+        <a href=<?php echo site_url('admin/car/update?id_car='.$car['id_car']);?>>Edytuj</a>
+        <a href=<?php echo site_url('admin/car/delete?id_car='.$car['id_car']);?> onclick="return confirm('Na pewno usunąć ten samochód?')">Usuń</a>
+        </br>
+<?php
         echo $car['brand']." | ";
         echo $car['model']." | ";
         echo $car['average_consumption']." | ";
