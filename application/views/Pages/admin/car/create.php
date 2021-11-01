@@ -54,7 +54,7 @@
     echo form_input('car_type', set_value('car_type'), "placeholder='Typ samochodu'");
     echo form_error('car_type');
 
-    echo form_submit('submit', "Stwórz konto");
+    echo form_submit('submit', "Dodaj auto");
 
     echo form_close();
 ?>
