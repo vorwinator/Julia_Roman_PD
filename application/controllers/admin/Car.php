@@ -38,8 +38,7 @@
 			else{
                 if($this->car_m->set_car()){
                     if($this->car_m->set_car_details()){
-                        $data['info']="Dodano nowe auto";
-                        $this->render_page($this->directory_path, "cars", $data);
+                        redirect('admin/car/cars?info=Dodano nowe auto');
                     }
                     else{
                         $data['info']="Niepowodzenie";
