@@ -5,12 +5,10 @@
             parent::__construct();
             if(str_contains(current_url(),'admin')){
                 if(!isset($_SESSION['login_acc_type'])){
-                    $data['info']="Musisz być zalogowany by mieć do tego dostęp.";
                     redirect('authentication/login?info=Musisz być zalogowany by mieć do tego dostęp.');
                 }
                 if(isset($_SESSION['login_acc_type'])){
                     if($_SESSION['login_acc_type']!=1){
-                        $data['info']="Musisz mieć prawa administratora aby uzyskać dostęp do tej witryny";
                         redirect('authentication/login?info=Musisz mieć prawa administratora aby uzyskać dostęp do tej witryny');
                     }
                 }
