@@ -1,5 +1,0 @@
-poprawki do responsywnosci:
-
-homepage - carousel rozmiary obrazków w mobilnych s¹ za du¿e
-admin - tabela wyjebana w prawo
-dodaj samochód - form nie na srodku, rozmiar placeholderów

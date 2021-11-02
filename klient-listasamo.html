@@ -33,16 +33,15 @@
               <a class="nav-link" href="#">Strona główna</a>
             </li>
               <li class="nav-item dropdown">
-                  <!-- DOPISUJ ZJEBANE BS DO DATA COKOLWIEK INACZEJ CHUJ NIE DZIALA -->
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   Nasza oferta
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                   <a class="dropdown-item text-colour" href="#">Lista aut</a>
-                  <a class="dropdown-item text-colour" href="#">Lista szoferów</a>
+                  <a class="dropdown-item text-colour" href="#">Przejazd z kierowcą</a>
                   <a class="dropdown-item text-colour" href="#">Lista placówek</a>
                   <div class="dropdown-divider"></div>
-                  <a class="dropdown-item text-colour" href="#">Jakieś coś</a>
+                  <a class="dropdown-item text-colour" href="#">O nas</a>
                 </div>
               </li>
               <li class="nav-item">
@@ -54,40 +53,37 @@
           </ul>
         </div>
       </nav>
-    <div class="container-fluid d-flex justify-content-center">
-      <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
-        <h1 class="header-colour">Zarejestruj się</h1>
-        <form style="padding-bottom: 3%" class="col-lg-9">
-          <div class="form-outline mb-4">
-            <input type="name" class="form-control form-control-lg"
-              placeholder="Imię" />
-          </div>
-          <div class="form-outline mb-4">
-            <input type="lastname" class="form-control form-control-lg"
-              placeholder="Nazwisko" />
-          </div>
-          <!-- Email input -->
-          <div class="form-outline mb-4">
-            <input type="email" class="form-control form-control-lg"
-              placeholder="Email" />
-          </div>
-
-          <!-- Password input -->
-          <div class="form-outline mb-3">
-            <input type="password" class="form-control form-control-lg"
-              placeholder="Hasło" />
-          </div>
-          <div class="form-outline mb-3">
-            <input type="password" class="form-control form-control-lg"
-              placeholder="Powtórz hasło" />
-          </div>
-          <div class="text-center mt-4">
-            <button type="button" class="btn btn-primary btn-lg"
-              style="padding-left: 2.5rem; padding-right: 2.5rem;">Utwórz konto</button>
-          </div>
-        </form>
-      </div>
+    <div class="container-fluid">
+      <div class="container-fluid padding-custom text-colour">
+        <h1 class="header-colour text-center">Lista samochodów - klient</h1> 
     </div>
+      <table id="example" class="display" style="width:100%">
+        <thead>
+            <tr>
+                <th>Foto</th>
+                <th>Informacje podstawowe</th>
+                <th>Szczegóły</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td style="width: 20%"><img class="img-fluid" style="max-width:100%" src="download.jpg"></td>
+                <td><div>Toyota</div><div>Yaris</div><div>2021</div></td>
+                <td><div>inne</div><div>info</div><div>costam</div></td>
+                <td><button type="button" class="btn btn-primary">Wyswietl</button></td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+              <th>Foto</th>
+                <th>Informacje podstawowe</th>
+                <th>Szczegóły</th>
+                <th></th>
+            </tr>
+        </tfoot>
+    </table>
+      </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous" ></script>
   </body>
   <footer>
