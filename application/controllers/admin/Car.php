@@ -109,8 +109,8 @@
         public function delete()
         {
             if(isset($_GET['id_car'])){
-                $data['info']="Gratuluję. Usunięto samochód.";
                 $this->car_m->delete($_GET['id_car']);
+                $data['info']="Gratuluję. Usunięto samochód.";
                 $data['cars']=$this->car_m->get_cars_with_details();
                 $this->render_page($this->directory_path, "cars", $data);
             }

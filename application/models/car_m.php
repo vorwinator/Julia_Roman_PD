@@ -6,6 +6,11 @@
         }
 
 
+		public function delete($id)
+		{
+			return $this->db->where('id_car', $id)->delete('car');
+		}
+
         public function set_car()
 		{
 			$data = array(
