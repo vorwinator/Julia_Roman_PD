@@ -23,4 +23,5 @@
 <a href=<?php echo site_url('authentication/sign_up');?>>Zarejestruj się</a> </br>
 <a href=<?php echo site_url('authentication/login');?>>Logowanie</a> </br>
 <a href=<?php echo site_url('authentication/logout');?>>Wyloguj</a> </br>
+<a href=<?php echo site_url('client/acc/profile');?>>Profil</a> </br>
 <a href=<?php echo site_url('main/index');?>>Główna</a> </br>
