@@ -66,7 +66,7 @@
         public function update()
         {
             if(isset($_GET['info']))$data['info']=$_GET['info'];
-            if(isset($_GET['id_car']))$_SESSION['selected_car_id']=$_GET['id_car'];
+            if(isset($_GET['id_car_update']))$_SESSION['selected_car_id']=$_GET['id_car_update'];
             $data['car']=$this->car_m->get_car_by_id($_SESSION['selected_car_id']);
 
             $this->form_validation->set_rules('release_year', 'Rok produkcji', 'required');
@@ -108,8 +108,8 @@
 
         public function delete()
         {
-            if(isset($_GET['id_car'])){
-                $this->car_m->delete($_GET['id_car']);
+            if(isset($_GET['id_car_delete'])){
+                $this->car_m->delete($_GET['id_car_delete']);
                 $data['info']="Gratuluję. Usunięto samochód.";
                 $data['cars']=$this->car_m->get_cars_with_details();
                 $this->render_page($this->directory_path, "cars", $data);

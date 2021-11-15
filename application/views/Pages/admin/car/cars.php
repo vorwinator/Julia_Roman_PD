@@ -7,8 +7,8 @@
         echo $car['rental_status']." | ";
         echo $car['insurance']." | ";
 ?>
-        <a href=<?php echo site_url('admin/car/update?id_car='.$car['id_car']);?>>Edytuj</a>
-        <a href=<?php echo site_url('admin/car/delete?id_car='.$car['id_car']);?> onclick="return confirm('Na pewno usunąć ten samochód?')">Usuń</a>
+        <a href=<?php echo site_url('admin/car/update?id_car_update='.$car['id_car']);?>>Edytuj</a>
+        <a href=<?php echo site_url('admin/car/delete?id_car_delete='.$car['id_car']);?> onclick="return confirm('Na pewno usunąć ten samochód?')">Usuń</a>
         </br>
 <?php
         echo $car['brand']." | ";
