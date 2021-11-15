@@ -1,1 +1,2 @@
 domek
+<?php echo $welcome ?>
