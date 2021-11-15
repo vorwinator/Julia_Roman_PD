@@ -32,6 +32,9 @@
                 if($_SESSION['login_acc_type']==1){
                     redirect('admin/account/create');//temp
                 }
+                else if($_SESSION['login_acc_type']==0){
+                    redirect('client/account/profile');//temp
+                }
                 else{
                     redirect('main/index');//temp
                 }
