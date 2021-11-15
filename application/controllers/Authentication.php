@@ -7,6 +7,8 @@
             $this->load->library(array('session','form_validation'));
             $this->load->helper(array('url','form'));
         }
+
+
         public function logout()
         {
             unset($_SESSION['login_id_acc']);
@@ -23,6 +25,8 @@
             $this->load->view('pages/authentication/login');//temp
             $this->load->view('templates/footer');            
         }
+
+        
         public function login(){
             if(isset($_SESSION['login_id_acc'])){
                 if($_SESSION['login_acc_type']==1){
@@ -92,6 +96,43 @@
                         }
                         
                     }
+            }
+        }
+
+
+        public function sign_up()
+        {
+            $this->load->model('account_m');
+
+            $this->form_validation->set_rules('email', 'Email', 'required|valid_email');
+			$this->form_validation->set_rules('firstname', 'Imię', 'required');
+			$this->form_validation->set_rules('lastname', 'Nazwisko', 'required');
+			$this->form_validation->set_rules('password', 'Hasło', 'required');
+			$this->form_validation->set_rules('password2', ' Powtórz hasło', 'required|matches[password]');
+            
+            $this->unit->run($this->form_validation->run(), TRUE, 'Czy wstawiono poprawne dane do formularza tworzącego konto.');
+
+			if ($this->form_validation->run() === FALSE)
+			{
+                $this->load->view('templates/header');
+                $this->load->view('pages/authentication/sign_up');
+                $this->load->view('templates/footer');
+			}
+			else{
+                if($this->account_m->set_account()){
+                    $data['info']="Konto utworzone. Zaloguj się.";
+
+                    $this->load->view('templates/header');
+                    $this->load->view('pages/authentication/login');
+                    $this->load->view('templates/footer');
+                } 
+                else{
+                    $data['info']="Niepowodzenie";
+
+                    $this->load->view('templates/header');
+                    $this->load->view('pages/authentication/sign_up', $data);
+                    $this->load->view('templates/footer');
+                }
             }
         }
     }
