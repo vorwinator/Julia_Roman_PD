@@ -59,4 +59,34 @@
             
             $this->render_page($this->directory_path, "crfs", $data);
         }
+
+
+        public function update()
+        {
+            if(isset($_GET['info']))$data['info']=$_GET['info'];
+            if(isset($_GET['id_crf_update']))$_SESSION['selected_crf_id']=$_GET['id_crf_update'];
+            $data['crf']=$this->crf_m->get_crf_by_id($_SESSION['selected_crf_id']);
+
+            $this->form_validation->set_rules('address', 'Adres', 'required');
+			$this->form_validation->set_rules('working_hours', 'Godziny pracy', 'required');
+			$this->form_validation->set_rules('type', 'Przeznaczenie placówki', 'required');
+            
+            $this->unit->run($this->form_validation->run(), TRUE, 'Czy wstawiono poprawne dane do formularza tworzącego placówkę.');
+
+            if ($this->form_validation->run() === FALSE)
+            {
+                $this->render_page($this->directory_path, "update", $data);
+            }
+            else
+            {
+                if($this->crf_m->update($_SESSION['selected_crf_id'])){
+                    unset($_SESSION['selected_car_id']);
+                    redirect('admin/car_rental_facility/crfs?info=Pomyślnie zedytowano dane placówki.');
+                }
+                else{
+                    redirect('admin/car_rental_facility/update?info=Niepowodzenie. Nie udało się zmodyfikować danych w bazie.');
+                }
+                
+            }
+        }
     }

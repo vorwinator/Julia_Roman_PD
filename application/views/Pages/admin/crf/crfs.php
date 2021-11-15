@@ -6,7 +6,7 @@
             echo $crf['working_hours']." | ";
             echo $crf['type']." | ";
 ?>
-            
+            <a href=<?php echo site_url('admin/car_rental_facility/update?id_crf_update='.$crf['id_car_rental_facility']);?>>Edytuj</a>
             <a href=<?php echo site_url('admin/car_rental_facility/delete?id_crf_delete='.$crf['id_car_rental_facility']);?> onclick="return confirm('Na pewno usunąć tą placówkę?')">Usuń</a>
             </br>
 <?php
