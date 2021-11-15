@@ -9,7 +9,17 @@
                 }
                 if(isset($_SESSION['login_acc_type'])){
                     if($_SESSION['login_acc_type']!=1){
-                        redirect('authentication/login?info=Musisz mieć prawa administratora aby uzyskać dostęp do tej witryny');
+                        redirect('main/index?info=Musisz mieć prawa administratora aby uzyskać dostęp do tej witryny');
+                    }
+                }
+            }
+            else if(str_contains(current_url(),'client')){
+                if(!isset($_SESSION['login_acc_type'])){
+                    redirect('authentication/login?info=Musisz być zalogowany by mieć do tego dostęp.');
+                }
+                if(isset($_SESSION['login_acc_type'])){
+                    if($_SESSION['login_acc_type']!=0){
+                        redirect('main/index?info=Musisz być zalogowany jako klient aby uzyskać dostęp do tej witryny');
                     }
                 }
             }
