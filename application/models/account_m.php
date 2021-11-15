@@ -20,6 +20,8 @@
 
 			return $this->db->insert('account', $data);
 		}
+
+
 		public function get_accounts()
 		{
 			$query = $this->db->select('id_acc, email, firstname, lastname, acc_type')
@@ -33,6 +35,24 @@
             }
 			
 			$this->unit->run($respond, 'is_array', 'Czy dane o kontach są dostarczane w formie tabeli danych.');
+            return $respond;
+		}
+
+
+		public function get_acc_by_id($id)
+		{
+			$query = $this->db->select('id_acc, email, firstname, lastname, acc_type')
+			->where('id_acc', $id)
+			->from('account')
+			->get();
+
+			if($query->num_rows() > 0){
+                $respond = $query->row_array();
+            }else{
+                $respond = FALSE;
+            }
+			
+			$this->unit->run($respond, 'is_array', 'Czy dane o koncie są dostarczane w formie tabeli danych.');
             return $respond;
 		}
     } 
