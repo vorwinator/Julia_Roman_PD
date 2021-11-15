@@ -18,6 +18,8 @@
 <a href=<?php echo site_url('admin/account/accounts');?>>Lista kont</a> </br>
 <a href=<?php echo site_url('admin/car/create');?>>Dodaj samochód</a> </br>
 <a href=<?php echo site_url('admin/car/cars');?>>Lista samochodów</a> </br>
+<a href=<?php echo site_url('admin/car_rental_facility/crfs');?>>Lista placówek</a> </br>
+<a href=<?php echo site_url('admin/car_rental_facility/create');?>>Dodaj placówkę</a> </br>
 <a href=<?php echo site_url('authentication/login');?>>Logowanie</a> </br>
 <a href=<?php echo site_url('authentication/logout');?>>Wyloguj</a> </br>
 <a href=<?php echo site_url('main/index');?>>Główna</a> </br>
