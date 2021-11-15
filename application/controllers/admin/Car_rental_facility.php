@@ -40,8 +40,21 @@
                 }
             }
         }
+
+
         public function crfs()
         {
+            $data['crfs'] = $this->crf_m->get_crfs();
+            
+            $this->render_page($this->directory_path, "crfs", $data);
+        }
+
+
+        public function delete()
+        {
+            if($_GET['id_crf_delete'])$this->crf_m->delete($_GET['id_crf_delete']);
+
+            $data['info'] = "Usunięto placówkę.";
             $data['crfs'] = $this->crf_m->get_crfs();
             
             $this->render_page($this->directory_path, "crfs", $data);
