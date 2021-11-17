@@ -34,8 +34,26 @@
 
             if(isset($data['title'])) $data['title'] = ucfirst($page); // Capitalize the first letter
 
-            $this->load->view('templates/header', $data);
-            $this->load->view($full_path, $data);
-            $this->load->view('templates/footer', $data);
+            if(!isset($_SESSION['login_acc_type'])){
+                $this->load->view('templates/header', $data);
+                $this->load->view($full_path, $data);
+                $this->load->view('templates/footer', $data);
+            }
+            else if($_SESSION['login_acc_type']==0){
+                $this->load->view('templates/header_client', $data);
+                $this->load->view($full_path, $data);
+                $this->load->view('templates/footer_client', $data);
+            }
+            else if($_SESSION['login_acc_type']==1){
+                $this->load->view('templates/header', $data);
+                $this->load->view($full_path, $data);
+                $this->load->view('templates/footer', $data);
+            }
+            else{
+                $this->load->view('templates/header_client', $data);
+                $this->load->view($full_path, $data);
+                $this->load->view('templates/footer_client', $data);
+            }
+            
         }
     }
