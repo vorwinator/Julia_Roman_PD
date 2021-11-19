@@ -1,7 +1,9 @@
 homepage - carousel rozmiary obrazków w mobilnych s¹ za du¿e
 
-admin - tabela za bardzo w prawo
+admin - tabela za bardzo w prawo, guzik dodaj samochod
 
 lista samochodów klient - karuzela z najpopularniejszymi
 
 OGÓLNE - pamiêtac o dawaniu width w procentach i jak siê da to height te¿, nazewnictwo etykiet, responsywnosc...
+
+wciecia w kodzie
