@@ -10,8 +10,11 @@
         }
 
         public function create(){
-            $this->form_validation->set_rules('address', 'Adres', 'required');
-			$this->form_validation->set_rules('working_hours', 'Godziny pracy', 'required');
+            $this->form_validation->set_rules('address_city', 'Miasto', 'required');
+            $this->form_validation->set_rules('address_street', 'Ulicę', 'required');
+            $this->form_validation->set_rules('address_housenumber', 'Numer budynku', 'required');
+            $this->form_validation->set_rules('address_apartmentnumber', 'Numer mieszkania', 'required');
+            $this->form_validation->set_rules('address_postalcode', 'Kod pocztowy', 'required');
 			$this->form_validation->set_rules('type', 'Przeznaczenie placówki', 'required');
             
             $this->unit->run($this->form_validation->run(), TRUE, 'Czy wstawiono poprawne dane do formularza tworzącego placówkę.');
