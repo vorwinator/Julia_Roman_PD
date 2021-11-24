@@ -1,11 +1,8 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
     <script type="text/javascript" language="javascript" src="https://code.jquery.com/jquery-3.3.1.js"></script>
@@ -15,14 +12,15 @@
     $('#example').DataTable();
 } );
     </script>
-    <title>Wypożyczalnia samochodów</title>
+    <title>Profil</title>
   </head>
   <body>
     <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #4D4847;">
       <div class="container-fluid nav-container1">
-        <a class="navbar-brand mx-auto text-colour" href="#">
+        <a class="navbar-brand mx-auto text-colour" href="index.html">
           <img src="https://getbootstrap.com/docs/4.1/assets/brand/bootstrap-solid.svg" width="30" height="30" alt="">
-          Firma roku</a>
+          Firma roku
+        </a>
       </div>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -30,84 +28,71 @@
         <div class="collapse navbar-collapse nav-container2" id="navbarNav">
           <ul class="navbar-nav nav-fill w-100">
             <li class="nav-item active">
-              <a class="nav-link" href="#">Strona główna</a>
+              <a class="nav-link" href="index.html">Strona główna</a>
             </li>
               <li class="nav-item dropdown">
-                  <!-- DOPISUJ BS DO DATA COKOLWIEK INACZEJ NIE DZIALA -->
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   Nasza oferta
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <a class="dropdown-item text-colour" href="#">Lista aut</a>
-                  <a class="dropdown-item text-colour" href="#">Przejazd z kierowcą</a>
-                  <a class="dropdown-item text-colour" href="#">Lista placówek</a>
+                  <a class="dropdown-item text-colour" href="klient-listasamo.html">Lista samochodów</a>
+                  <a class="dropdown-item text-colour" href="klient-listaplacowek.html">Lista placówek</a>
                   <div class="dropdown-divider"></div>
-                  <a class="dropdown-item text-colour" href="#">O nas</a>
+                  <a class="dropdown-item text-colour" href="wynajmij.html">Wynajmij samochód</a>
+                  <a class="dropdown-item text-colour" href="przejazd.html">Przejazd z kierowcą</a>
                 </div>
               </li>
               <li class="nav-item">
-                <a class="nav-link text-colour" href="#">Mój profil</a>
+                <a class="nav-link text-colour" href="profil.html">Mój profil</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link text-colour" href="#">Zaloguj się</a>
+                <a class="nav-link text-colour" href="logowanie.html">Zaloguj się</a>
               </li>
           </ul>
         </div>
-      </nav>
-
+    </nav>
       <div class="container-fluid d-flex justify-content-center">
         <div class="col-md-8 col-lg-6 col-xl-4">
-          <!--offset-xl-1 psuje padding-->
-          <div class="container rounded mb-5" >
-            <form style="padding-bottom: 40%; padding-top: 5%; width: 100%;" class="col-lg-9">
-            <h1 class="header-colour text-center" style="padding-bottom: 10%;">Profil</h1>
-            <div class="row">
-              <div class="col">
-                <div class="form-floating mb-3">
-                  <input type="name" class="form-control form-control-lg"
-                  placeholder="flimie" />
-                  <label for="flimie">Imię</label>
+          <div class="container rounded mb-5">
+            <form class="col-lg-9 profile-form">
+              <h1 class="big-header-style text-center" style="padding-bottom: 10%;">Profil</h1>
+              <div class="row">
+                <div class="col col-border">
+                  <div class="form-floating mb-3">
+                    <input type="imie" class="form-control form-control-lg" placeholder="imie" />
+                    <label for="imie">Imię</label>
                   </div>
                   <div class="form-floating mb-3">
-                    <input type="surname" class="form-control form-control-lg"
-                    placeholder="flsurname" />
-                    <label for="flsurname">Nazwisko</label>
-                    </div>
-                    <div class="form-floating mb-3">
-                      <input type="email" class="form-control form-control-lg"
-                        placeholder="flemail" />
-                        <label for="flemail">Email</label>
-                    </div>
-                    <div class="text-center"> <button class="btn btn-primary" style="padding-left: 8%; padding-right: 8%;" type="button">Zapisz</button></div>
-              </div>
-
-              <div class="col">
-                <div class="form-floating mb-3">
-                  <input type="password" class="form-control form-control-lg"
-                  placeholder="flpassword" />
-                  <label for="flpassword">Obecne hasło</label>
+                    <input type="surname" class="form-control form-control-lg" placeholder="surname" />
+                    <label for="surname">Nazwisko</label>
                   </div>
                   <div class="form-floating mb-3">
-                    <input type="pass" class="form-control form-control-lg"
-                    placeholder="flpass" />
-                    <label for="flpass">Nowe hasło</label>
-                    </div>
-                    <div class="form-floating mb-3">
-                      <input type="pass2" class="form-control form-control-lg"
-                        placeholder="flpass2" />
-                        <label for="flpass2">Powtórz nowe hasło</label>
-                    </div>
-                    <div class="text-center"> <button class="btn btn-primary" style="padding-left: 8%; padding-right: 8%;" type="button">Zapisz</button></div>
-                   
+                    <input type="email" class="form-control form-control-lg" placeholder="email" />
+                    <label for="email">Email</label>
+                  </div>
+                  <div class="text-center"> <button class="btn btn-primary single-button-style" type="button">Zapisz</button></div>
+                </div>
+                <div class="col">
+                  <div class="form-floating mb-3">
+                    <input type="password" class="form-control form-control-lg" placeholder="password" />
+                    <label for="flpassword">Obecne hasło</label>
+                  </div>
+                  <div class="form-floating mb-3">
+                    <input type="password2" class="form-control form-control-lg" placeholder="password2" />
+                    <label for="password2">Nowe hasło</label>
+                  </div>
+                  <div class="form-floating mb-3">
+                    <input type="repeat" class="form-control form-control-lg" placeholder="repeat" />
+                    <label for="repeat">Powtórz nowe hasło</label>
+                  </div>
+                  <div class="text-center"> <button class="btn btn-primary single-button-style" type="button">Zapisz</button></div>
+                </div>
+                <div class="col-xs-12 text-center pd-top">
+                  <button class="btn btn-primary single-button-style" type="button">Lista wypożyczeń</button>
+                </div>
               </div>
-
-              <div class="col-xs-12 text-center" style="padding-top: 10%;">
-                <button class="btn btn-primary" type="button" style="padding-left: 8%; padding-right: 8%;">Lista wypożyczeń</button>
-              </div>
-              
+            </form>
           </div>
-          </form>
-        </div>
         </div>
       </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous" ></script>

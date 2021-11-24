@@ -6,4 +6,4 @@ lista samochodów klient - karuzela z najpopularniejszymi
 
 OGÓLNE - pamiêtac o dawaniu width w procentach i jak siê da to height te¿, nazewnictwo etykiet, responsywnosc...
 
-wciecia w kodzie
+fonty rozmiary dla responsywnosci
