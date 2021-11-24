@@ -2,6 +2,7 @@
     foreach ($cars as $car){
         echo $car['id_car']." | ";
         echo $car['release_year']." | ";
+        echo $car['fuel']." | ";
         echo $car['price_per_day']." | ";
         echo $car['mileage']." | ";
         echo $car['rental_status']." | ";

@@ -15,6 +15,7 @@
 		{
 			$data = array(
 				'release_year' => $this->input->post('release_year'),
+				'fuel' => $this->input->post('fuel'),
 				'price_per_day' => $this->input->post('price_per_day'),
 				'mileage' => $this->input->post('mileage'),
 				'rental_status' => $this->input->post('rental_status'),
@@ -89,6 +90,7 @@
 		{
             $data = array(
 				'release_year' => $this->input->post('release_year'),
+				'fuel' => $this->input->post('fuel'),
 				'price_per_day' => $this->input->post('price_per_day'),
 				'mileage' => $this->input->post('mileage'),
 				'rental_status' => $this->input->post('rental_status'),

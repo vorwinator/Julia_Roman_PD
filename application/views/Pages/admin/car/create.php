@@ -5,6 +5,9 @@
     echo form_input('release_year', set_value('release_year'), "placeholder='Rok produkcji'");
     echo form_error('release_year');
 
+    echo form_input('fuel', set_value('fuel'), "placeholder='Rodzaj paliwa'");
+    echo form_error('fuel');
+
     echo form_input('price_per_day', set_value('price_per_day'), "placeholder='Cena za dobę w PLN'");
     echo form_error('price_per_day');
 

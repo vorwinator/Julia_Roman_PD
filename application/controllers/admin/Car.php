@@ -13,6 +13,7 @@
         public function create()
         {
             $this->form_validation->set_rules('release_year', 'Rok produkcji', 'required');
+            $this->form_validation->set_rules('fuel', 'Rodzaj paliwa', 'required');
 			$this->form_validation->set_rules('price_per_day', 'Cenę za dobę', 'required');
 			$this->form_validation->set_rules('mileage', 'Przebieg', 'required');
 			$this->form_validation->set_rules('insurance', 'Ubezpieczenie', 'required');
@@ -70,6 +71,7 @@
             $data['car']=$this->car_m->get_car_by_id($_SESSION['selected_car_id']);
 
             $this->form_validation->set_rules('release_year', 'Rok produkcji', 'required');
+            $this->form_validation->set_rules('fuel', 'Rodzaj paliwa', 'required');
 			$this->form_validation->set_rules('price_per_day', 'Cenę za dobę', 'required');
 			$this->form_validation->set_rules('mileage', 'Przebieg', 'required');
 			$this->form_validation->set_rules('insurance', 'Ubezpieczenie', 'required');
