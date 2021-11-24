@@ -7,9 +7,28 @@
 
         public function set_crf()
 		{
+
+			$working_hours = array(
+				$this->input->post('working_hours_open_monday')."-".$this->input->post('working_hours_close_monday'),
+				$this->input->post('working_hours_open_tuesday')."-".$this->input->post('working_hours_close_tuesday'),
+				$this->input->post('working_hours_open_wednesday')."-".$this->input->post('working_hours_close_wednesday'),
+				$this->input->post('working_hours_open_thursday')."-".$this->input->post('working_hours_close_thursday'),
+				$this->input->post('working_hours_open_friday')."-".$this->input->post('working_hours_close_friday'),
+				$this->input->post('working_hours_open_saturday')."-".$this->input->post('working_hours_close_saturday'),
+				$this->input->post('working_hours_open_sunday')."-".$this->input->post('working_hours_close_sunday')
+			);
+			$working_hours_final = "";
+
+			for ($i=0; $i < 7; $i++) { 
+				if(strlen($working_hours[$i])<9){
+					$working_hours[$i]="Nieczynne";
+				}
+				$working_hours_final .= $working_hours[$i]." ";
+			}
+
 			$data = array(
-				'address' => $this->input->post('address'),
-				'working_hours' => $this->input->post('working_hours'),
+				'address' => ucfirst(strtolower($this->input->post('address_city')))." ".ucfirst(strtolower($this->input->post('address_street')))." ".$this->input->post('address_housenumber')."/".$this->input->post('address_apartmentnumber')." ".$this->input->post('address_postalcode'),
+				'working_hours' => $working_hours_final,
 				'type' => $this->input->post('type')
 			);
 
