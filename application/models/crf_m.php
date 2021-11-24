@@ -25,9 +25,12 @@
 				}
 				$working_hours_final .= $working_hours[$i]." ";
 			}
-
+			$adress_apartmentnumber = "";
+			if($this->input->post('address_apartmentnumber')!=null){
+				$adress_apartmentnumber = "/".$this->input->post('address_apartmentnumber');
+			}
 			$data = array(
-				'address' => ucfirst(strtolower($this->input->post('address_city')))." ".ucfirst(strtolower($this->input->post('address_street')))." ".$this->input->post('address_housenumber')."/".$this->input->post('address_apartmentnumber')." ".$this->input->post('address_postalcode'),
+				'address' => ucfirst(strtolower($this->input->post('address_city')))." ".ucfirst(strtolower($this->input->post('address_street')))." ".$this->input->post('address_housenumber').$adress_apartmentnumber." ".$this->input->post('address_postalcode'),
 				'working_hours' => $working_hours_final,
 				'type' => $this->input->post('type')
 			);
