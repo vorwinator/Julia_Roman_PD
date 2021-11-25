@@ -18,4 +18,4 @@
         echo $car['deposit']." | ";
         echo $car['car_type']."</br>";
 ?>
-        <a href=<?php echo site_url('admin/car/update?id_car_update='.$car['id_car']);?>>Wynajmij</a>
+        <a href=<?php echo site_url('client/rent?id_car_rent='.$car['id_car']);?>>Wynajmij</a>

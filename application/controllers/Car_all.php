@@ -23,7 +23,7 @@
         public function details()
         {
             if(isset($_GET['info']))$data['info']=$_GET['info'];
-            if(isset($_GET['id_car_update']))$_SESSION['selected_car_id']=$_GET['id_car_update'];
+            if(isset($_GET['id_car_details']))$_SESSION['selected_car_id']=$_GET['id_car_details'];
             $data['car']=$this->car_m->get_car_by_id($_SESSION['selected_car_id']);
 
             $this->render_page($this->directory_path, "details", $data);

@@ -9,5 +9,5 @@
         echo $car['air_conditioning']." | ";
         echo $car['deposit']." | ";
 ?>
-    <a href=<?php echo site_url('car_all/details?id_car_update='.$car['id_car']);?>>Wybierz</a></br>
+    <a href=<?php echo site_url('car_all/details?id_car_details='.$car['id_car']);?>>Wybierz</a></br>
 <?php } ?>
