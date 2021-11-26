@@ -7,6 +7,7 @@
         {
             parent::__construct();
             $this->load->model('car_m');
+            $this->load->model('crf_m');
             $this->load->model('rental_m');
         }
 
@@ -15,6 +16,7 @@
             if(isset($_GET['info']))$data['info']=$_GET['info'];
             if(isset($_GET['id_car_details']))$_SESSION['selected_car_id']=$_GET['id_car_details'];
             $data['car']=$this->car_m->get_car_by_id($_SESSION['selected_car_id']);
+            $data['address_options']=$this->crf_m->get_crfs_addresses();
             
             $this->form_validation->set_rules('start_date', 'Datę rozpoczęcia', 'required');
             $this->form_validation->set_rules('end_date', 'Datę zakończenia', 'required');
