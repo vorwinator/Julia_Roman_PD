@@ -18,16 +18,11 @@
 
     echo form_input('end_date', set_value('end_date'), "placeholder='Data zakończenia'");
     echo form_error('end_date');
-
-    $address_options = array(
-        'Odbiór'=>'Odbiór',
-        'Zwrot'=>'Zwrot',
-        'Oba'=>'Oba'
-    );
-    echo form_dropdown('address', $type_options);
+    
+    echo form_dropdown('address', $address_options);
     echo form_error('address');
 
-    echo form_submit('submit', "Stwórz konto");
+    echo form_submit('submit', "Zatwierdź wynajem");
 
     echo form_close();
 ?>
