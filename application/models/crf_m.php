@@ -117,4 +117,20 @@
 
 			return $respond;
 		}
+
+
+		public function get_crfs_addresses()
+		{
+			$query = $this->db->select('address')
+			->from('car_rental_facility')
+			->get();
+
+			if($query->num_rows() > 0){
+                $respond = $query->result_array();
+            }else{
+                $respond = FALSE;
+            }
+
+			return $respond;
+		}
     } 
