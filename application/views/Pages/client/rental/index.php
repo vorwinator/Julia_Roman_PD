@@ -19,8 +19,8 @@
     echo form_input('end_date', set_value('end_date'), "placeholder='Data zakończenia'");
     echo form_error('end_date');
     
-    echo form_dropdown('address', $address_options);
-    echo form_error('address');
+    echo form_dropdown('crf_address', $address_options);
+    echo form_error('crf_address');
 
     echo form_submit('submit', "Zatwierdź wynajem");
 
