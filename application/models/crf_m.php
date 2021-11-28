@@ -126,7 +126,10 @@
 			->get();
 
 			if($query->num_rows() > 0){
-                $respond = $query->result_array();
+                $crfs_addresses = $query->result_object();
+				foreach ($crfs_addresses as $crf_address) {
+					$respond[$crf_address->address] = $crf_address->address;
+				}
             }else{
                 $respond = FALSE;
             }
