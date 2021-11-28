@@ -20,7 +20,7 @@
             
             $this->form_validation->set_rules('start_date', 'Datę rozpoczęcia', 'required');
             $this->form_validation->set_rules('end_date', 'Datę zakończenia', 'required');
-            $this->form_validation->set_rules('address', 'Adres placówki', 'required');
+            $this->form_validation->set_rules('crf_address', 'Adres placówki', 'required');
             
             $this->unit->run($this->form_validation->run(), TRUE, 'Czy wstawiono poprawne dane do formularza ustanawiającego wynajem.');
 
