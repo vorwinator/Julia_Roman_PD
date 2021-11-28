@@ -25,4 +25,4 @@
 <a href=<?php echo site_url('authentication/logout');?>>Wyloguj</a> </br>
 <a href=<?php echo site_url('client/acc/profile');?>>Profil</a> </br>
 <a href=<?php echo site_url('main/index');?>>Główna</a> </br>
-<a href=<?php echo site_url('car_all/cars');?>>Lista samochodów</a> </br>
+<a href=<?php echo site_url('car_all/cars');?>>Lista aut</a> </br>
