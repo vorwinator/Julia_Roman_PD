@@ -1,0 +1,1 @@
+to jest lista wynajmow
