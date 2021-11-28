@@ -68,6 +68,26 @@
 		}
 
 
+		public function get_unique_cars_with_details_free_to_rent()
+		{
+			$query = $this->db->select('*')
+			->from('car_details')
+			->join('car', 'car.id_car=car_details.id_car')
+			->where('car.rental_status', 0)
+			->distinct('car.model')
+			->get();
+
+			if($query->num_rows() > 0){
+                $respond = $query->result_array();
+            }else{
+                $respond = FALSE;
+            }
+
+			$this->unit->run($respond, 'is_array', 'Czy dane o samochodach są dostarczane w formie tabeli danych.');
+			return $respond;
+		}
+
+
 		public function get_car_by_id($id)
 		{
             $query = $this->db->select('*')

@@ -14,7 +14,7 @@
         {
             if(isset($_GET['info']))$data['info']=$_GET['info'];
             $data['welcome'] = "To jest lista aut";
-            $data['cars'] = $this->car_m->get_cars_with_details();
+            $data['cars'] = $this->car_m->get_unique_cars_with_details_free_to_rent();
             
             $this->render_page($this->directory_path, "cars", $data);
         }
