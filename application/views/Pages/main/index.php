@@ -1,2 +1,2 @@
 domek
-<?php echo $welcome ?>
+<?php echo "to jest domek" ?>
