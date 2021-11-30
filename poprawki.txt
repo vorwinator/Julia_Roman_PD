@@ -1,9 +1,11 @@
 homepage - carousel rozmiary obrazków w mobilnych s¹ za du¿e
 
-admin - tabela za bardzo w prawo, guzik dodaj samochod
+admin - tabela za bardzo w prawo
 
 lista samochodów klient - karuzela z najpopularniejszymi
 
-OGÓLNE - pamiêtac o dawaniu width w procentach i jak siê da to height te¿, nazewnictwo etykiet, responsywnosc...
+OGÓLNE - pamiêtac o dawaniu width w procentach i jak siê da to height te¿, responsywnosc...
 
 fonty rozmiary dla responsywnosci
+
+klimatyzacja lista divy - doszlifowaæ
