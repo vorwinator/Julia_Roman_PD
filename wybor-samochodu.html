@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" language="javascript" src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script type="text/javascript" language="javascript" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+    <title>Wybór samochodu</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #4D4847;">
+      <div class="container-fluid nav-container1">
+        <a class="navbar-brand mx-auto text-colour" href="index.html">
+          <img src="https://getbootstrap.com/docs/4.1/assets/brand/bootstrap-solid.svg" width="30" height="30" alt="">
+          Firma roku
+        </a>
+      </div>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse nav-container2" id="navbarNav">
+          <ul class="navbar-nav nav-fill w-100">
+            <li class="nav-item active">
+              <a class="nav-link" href="index.html">Strona główna</a>
+            </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Nasza oferta
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item text-colour" href="klient-listasamo.html">Lista samochodów</a>
+                  <a class="dropdown-item text-colour" href="klient-listaplacowek.html">Lista placówek</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item text-colour" href="wynajmij.html">Wynajmij samochód</a>
+                  <a class="dropdown-item text-colour" href="przejazd.html">Przejazd z kierowcą</a>
+                </div>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-colour" href="profil.html">Mój profil</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-colour" href="logowanie.html">Zaloguj się</a>
+              </li>
+          </ul>
+        </div>
+    </nav>
+    <div class="container-fluid">
+      <div class="pd-bread">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="index.html">Strona główna</a></li>
+            <li class="breadcrumb-item"><a href="klient-listasamo.html">Lista samochodów</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Toyota Yaris 123</li>
+          </ol>
+        </nav>
+      </div>
+      <div class="row car-select">
+        <div class="col-md-6 d-flex justify-content-center">
+          <div id="carouselExampleIndicators" class="carousel carousel-car slide" data-bs-ride="carousel">
+            <ol class="carousel-indicators">
+              <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"></li>
+              <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"></li>
+              <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img style="object-fit: fill; width:100%; height:100%;" src="https://www.elleman.pl/media/cache/big/uploads/media/default/0005/39/80d30ad1deab06645d8f32642ff7fd3bc121b310.jpeg" alt="First slide">  
+                <div class="carousel-caption d-none d-md-block">
+                  
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img style="object-fit: fill; width:100%; height:100%;" src="https://motopedia.otomoto.pl/wp-content/uploads/2021/01/z24236394IHAudi-e-tron-GT.jpeg" alt="Second slide">
+                <div class="carousel-caption d-none d-md-block">
+                  
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img style="object-fit: fill; width:100%; height:100%;" src="https://villalittleparadise.com/wp-content/uploads/2021/05/Car-Rental.png" alt="Third slide">
+                <div class="carousel-caption d-none d-md-block">
+                  
+                </div>
+              </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            </a>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <h1 class="car-header-style">Toyota Yaris 1234</h1>
+          <ul>
+            <li>Rok produkcji: 2010</li>
+            <li>Liczba siedzeń: 5</li>
+            <li>Liczba drzwi: 5</li>
+            <li>Spalanie: x</li>
+            <li>Przebieg w km: 10000</li>
+            <li>Liczba poduszek powietrznych: x</li>
+            <li>Napęd: x</li>
+            <li>Klimatyzacja: x</li>
+            <li>Skrzynia biegów: automatyczna</li>
+            <li>Pojemność bagażnika: x</li>
+            <li>Kaucja: x</li>
+            <li>Typ samochodu: x</li>
+            <li>Ubezpieczenie: x</li>
+          </ul>
+          <div class="row caption">
+            <div class="col-md-4 kwota-bold text-center">
+              365 PLN/DZIEŃ<br><a role="button" class="btn btn-primary full-width-btn" href="wynajmij.html">Wynajmij<br>samochód</a>
+            </div>
+            <div class="col-md-1 odstep text-center">
+              lub
+            </div>
+            <div class="col-md-4 kwota-bold text-center">
+              20 PLN/KM<br><a role="button" class="btn btn-primary full-width-btn" href="przejazd.html">Zamów przejazd<br>z kierowcą</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous" ></script>
+  </body>
+  <footer>
+    <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+      © 2021 Copyright: Firma roku
+      <a class="text-reset fw-bold" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+    </div>
+  </footer>
+</html>

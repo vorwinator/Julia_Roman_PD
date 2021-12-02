@@ -1,11 +1,32 @@
-homepage - carousel rozmiary obrazków w mobilnych s¹ za du¿e
+homepage - carousel rozmiary obrazkï¿½w w mobilnych sï¿½ za duï¿½e
 
 admin - tabela za bardzo w prawo
 
-lista samochodów klient - karuzela z najpopularniejszymi
+lista samochodï¿½w klient - karuzela z najpopularniejszymi
 
-OGÓLNE - pamiêtac o dawaniu width w procentach i jak siê da to height te¿, responsywnosc...
+OGï¿½LNE - pamiï¿½tac o dawaniu width w procentach i jak siï¿½ da to height teï¿½, responsywnosc...
 
 fonty rozmiary dla responsywnosci
 
-klimatyzacja lista divy - doszlifowaæ
+klimatyzacja lista divy - doszlifowaï¿½
+
+<ul>
+                    <li>Rok produkcji: 2010</li>
+                    <li>Liczba siedzeÅ„: 5</li>
+                    <li>Liczba drzwi: 5</li>
+                    <button class="btn btn-link" type="button" data-bs-toggle="collapse" data-bs-target="#readmore" aria-expanded="false" aria-controls="collapseExample">RozwiÅ„ >></button>
+                </ul>
+                <div class="collapse multi-collapse" id="readmore">
+                        <ul>
+                            <li>Spalanie: x</li>
+                            <li>Przebieg w km: 10000</li>
+                            <li>Liczba poduszek powietrznych: x</li>
+                            <li>NapÄ™d: x</li>
+                            <li>Klimatyzacja: x</li>
+                            <li>Skrzynia biegÃ³w: automatyczna</li>
+                            <li>PojemnoÅ›Ä‡ bagaÅ¼nika: x</li>
+                            <li>Kaucja: x</li>
+                            <li>Typ samochodu: x</li>
+                            <li>Ubezpieczenie: x</li>
+                        </ul>
+                </div>
