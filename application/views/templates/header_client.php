@@ -15,9 +15,19 @@
     $('#example').DataTable();
 } );
     </script>
+    <script>
+        <?php if(isset($info)) { ?>
+            function infoWindow(message) {
+                alert(message);
+            }
+        <?php } ?>
+            function alertWindow() {
+                infoWindow("<?php if(isset($info)) echo $info ?>");
+            }
+    </script>
     <title>Wypożyczalnia samochodów</title>
   </head>
-  <body>
+  <body onload=alertWindow()>
     <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #4D4847;">
         <div class="container-fluid nav-container1">
             <a class="navbar-brand mx-auto text-colour" href="#">
