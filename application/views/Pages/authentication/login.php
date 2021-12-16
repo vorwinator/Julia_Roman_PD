@@ -1,7 +1,7 @@
 <div class="container-fluid d-flex justify-content-center">
     <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
         <?php
-        echo form_open('authentication/login', 'class=col-lg-9 pd-login');
+        echo form_open('authentication/login', 'class="col-lg-9 pd-login"');
         ?>
             <h1 class="big-header-style text-center">Zaloguj się</h1>
             <div class="pd-top">
