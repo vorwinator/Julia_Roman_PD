@@ -10,13 +10,13 @@
                 </div>
                 <div class="form-floating mb-4">
                     <?php
-                    echo form_input('email', set_value('email'), "class=form-control form-control-lg");
+                    echo form_input('email', set_value('email'), 'class="form-control form-control-lg"');
                     echo form_label('Email', 'email');
                     ?>
                 </div>
                 <div class="form-floating mb-3">
                     <?php
-                    echo form_password('password', '', "class=form-control form-control-lg");
+                    echo form_password('password', '', 'class="form-control form-control-lg"');
                     echo form_label('Hasło', 'password');
                     ?>
                 </div>
@@ -28,11 +28,10 @@
                     <a href="#" class="text-body">Przypomnij hasło</a>
                 </div> -->
                 <div class="text-center mt-4">
-                    <!-- <button type="button" class="btn btn-primary btn-lg single-button-style">Zaloguj</button> -->
                     <?php
                     echo form_input('acc_type', 1, 'style="display:none;"');
 
-                    echo form_submit('submit', "Zaloguj się", "class=btn btn-primary btn-lg single-button-style");
+                    echo form_submit('submit', "Zaloguj", 'class="btn btn-primary btn-lg single-button-style"');
                     ?>
                 </div>
             </div>
