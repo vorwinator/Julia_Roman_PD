@@ -1,28 +1,87 @@
-<?php
-    foreach ($cars as $car){
-        echo $car['id_car']." | ";
-        echo $car['release_year']." | ";
-        echo $car['fuel']." | ";
-        echo $car['price_per_day']." | ";
-        echo $car['mileage']." | ";
-        echo $car['rental_status']." | ";
-        echo $car['insurance']." | ";
-?>
-        <a href=<?php echo site_url('admin/car/update?id_car_update='.$car['id_car']);?>>Edytuj</a>
-        <a href=<?php echo site_url('admin/car/delete?id_car_delete='.$car['id_car']);?> onclick="return confirm('Na pewno usunąć ten samochód?')">Usuń</a>
-        </br>
-<?php
-        echo $car['brand']." | ";
-        echo $car['model']." | ";
-        echo $car['average_consumption']." | ";
-        echo $car['number_of_airbags']." | ";
-        echo $car['number_of_doors']." | ";
-        echo $car['number_of_seats']." | ";
-        echo $car['drive']." | ";
-        echo $car['air_conditioning']." | ";
-        echo $car['gearbox']." | ";
-        echo $car['trunk_capacity']." | ";
-        echo $car['deposit']." | ";
-        echo $car['car_type']."</br>";
-    }
-?>
+<div class="container-fluid">
+    <div class="col-md-8 col-lg-6 col-xl-4 offset-1 mx-auto">
+        <h1 class="big-header-style text-center">Lista samochodów - admin</h1>
+    </div>
+    <div class="col-md-8 col-lg-12 text-center pd-bottom">
+        <a role="button" class="btn btn-outline-primary full-width-btn" href="dodajsamo.html">Dodaj samochód</a>
+    </div>
+    <table id="example" class="display">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Marka</th>
+                <th>Model</th>
+                <th>Rok produkcji</th>
+                <th>Cena za dobę</th>
+                <th>Przebieg w km</th>
+                <th>Czy wypożyczony</th>
+                <th>Zdjęcie</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+        <?php
+        foreach ($cars as $car){
+        ?>
+            <tr>
+                <td>
+                    <?php
+                    echo $car['id_car']
+                    ?>
+                </td>
+                <td>
+                    <?php
+                    echo $car['brand']
+                    ?>
+                </td>
+                <td>
+                    <?php
+                    echo $car['model']
+                    ?>
+                </td>
+                <td>
+                    <?php
+                    echo $car['release_year']
+                    ?>
+                </td>
+                <td>
+                    <?php
+                    echo $car['price_per_day']
+                    ?>
+                </td>
+                <td>
+                    <?php
+                    echo $car['mileage']
+                    ?>
+                </td>
+                <td>
+                    <?php
+                    if($car['rental_status']==0)echo "Nie";
+                    elseif($car['rental_status']==1)echo "Tak";
+                    ?>
+                </td>
+                <td style="width: 10%"><img class="img-fluid" style="max-width:50%" src="bil.png"></td>
+                <td>
+                    <!-- <button type="button" class="btn btn-primary btn-custom">Edytuj</button>
+                    <button type="button" class="btn btn-danger btn-custom">Usuń</button> -->
+                    <a href=<?php echo site_url('admin/car/update?id_car_update='.$car['id_car']);?>><button type="button" class="btn btn-primary btn-custom">Edytuj</button></a>
+                    <a href=<?php echo site_url('admin/car/delete?id_car_delete='.$car['id_car']);?> onclick="return confirm('Na pewno usunąć ten samochód?')"><button type="button" class="btn btn-danger btn-custom">Usuń</button></a>
+                </td>
+            </tr>
+        <?php } ?>
+        </tbody>
+        <tfoot>
+            <tr>
+              <th>Id</th>
+              <th>Marka</th>
+              <th>Model</th>
+              <th>Rok produkcji</th>
+              <th>Cena za dobę</th>
+              <th>Przebieg w km</th>
+              <th>Czy wypożyczony</th>
+              <th>Zdjęcie</th>
+              <th></th>
+            </tr>
+        </tfoot>
+    </table>
+</div>
