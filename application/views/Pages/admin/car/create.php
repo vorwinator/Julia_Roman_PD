@@ -81,8 +81,8 @@
                     </div>
                     <div class="form-floating mb-3">
                         <?php
-                        echo form_input('air_coditioning', set_value('air_coditioning'), 'class="form-control form-control-lg" placeholder="Klimatyzacja"');
-                        echo form_label('Klimatyzacja', 'air_coditioning');
+                        echo form_input('air_conditioning', set_value('air_conditioning'), 'class="form-control form-control-lg" placeholder="Klimatyzacja"');
+                        echo form_label('Klimatyzacja', 'air_conditioning');
                         ?>
                     </div>
                     <div class="form-floating mb-3">
