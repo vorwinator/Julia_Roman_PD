@@ -3,7 +3,7 @@
         <h1 class="big-header-style text-center">Lista samochodów - admin</h1>
     </div>
     <div class="col-md-8 col-lg-12 text-center pd-bottom">
-        <a role="button" class="btn btn-outline-primary full-width-btn" href="dodajsamo.html">Dodaj samochód</a>
+        <a role="button" class="btn btn-outline-primary full-width-btn" href=<?php echo site_url('admin/car/create');?>>Dodaj samochód</a>
     </div>
     <table id="example" class="display">
         <thead>
