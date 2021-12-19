@@ -47,7 +47,7 @@
                     <!-- <input type="repeat" class="form-control form-control-lg" placeholder="repeat" />
                     <label for="repeat">Powtórz hasło</label> -->
                     <?php
-                    echo form_password('password', '', 'class="form-control form-control-lg"');
+                    echo form_password('password2', '', 'class="form-control form-control-lg"');
                     echo form_label('Powtórz hasło', 'password2');
                     ?>
                 </div>
