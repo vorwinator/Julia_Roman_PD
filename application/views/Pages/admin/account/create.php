@@ -4,7 +4,7 @@
         <?php
         echo form_open(current_url(), 'class="col-lg-9 pd-registr"');
         ?>
-            <h1 class="big-header-style text-center">Zarejestruj konto</h1>
+            <h1 class="big-header-style text-center">Dodaj konto</h1>
             <div class="pd-top">
                 <div class="form-floating mb-4">
                     <!-- <input type="imie" class="form-control form-control-lg" placeholder="imie" />
