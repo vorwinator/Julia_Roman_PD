@@ -92,9 +92,7 @@
                                 $this->load->view('templates/footer');
                             }
                             else{
-                                $this->load->view('templates/header');
-                                $this->load->view('pages/main/index');//temp
-                                $this->load->view('templates/footer');
+                                redirect('main/index');
                             }
                         }
                         
