@@ -13,7 +13,6 @@
                 <th>Nazwisko</th>
                 <th>Email</th>
                 <th>Typ konta</th>
-                <th>Opcje</th>
             </tr>
         </thead>
         <tbody>
@@ -47,9 +46,6 @@
                     elseif($account['acc_type']==1) echo "Admin";
                     ?>
                 </td>
-                <td>
-                    <a href=<?php echo site_url('admin/account/create');?>><button type="button" class="btn btn-primary btn-custom">Edytuj</button></a>
-                </td>
             </tr>
             <?php
             }
@@ -62,7 +58,6 @@
                 <th>Nazwisko</th>
                 <th>Email</th>
                 <th>Typ konta</th>
-                <th>Opcje</th>
             </tr>
         </tfoot>
     </table>
