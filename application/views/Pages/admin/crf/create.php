@@ -1,17 +1,54 @@
 <div class="container-fluid d-flex justify-content-center">
-    <div class="col-md-8 col-lg-6 col-xl-4 offset-1">
+    <div class="col-md-8 col-lg-6 col-xl-6 offset-1">
         <!-- <form class="col-lg-10 pd-bottom"> -->
         <?php
         echo form_open(current_url(), 'class="col-lg-10 pd-bottom"');
         ?>
         <h1 class="big-header-style text-center">Dodaj placówkę</h1>
         <div class="row">
-            <h3 class="small-header-style text-center">Adres</h3>
+            <h3 class="small-header-style text-center">Typ placówki</h3>
             <div class="col-md-12">
+                <div class="form-floating mb-3">
+                    <select class="col-md-12 form-control-lg">
+                        <option>Odbiór</option>
+                        <option>Zwrot</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <h3 class="small-header-style text-center">Adres</h3>
+            <div class="col-md-8">
                 <div class="form-floating mb-3">
                     <?php
                     echo form_input('address_street', set_value('address_street'), 'class="form-control form-control-lg" placeholder="Ulica"');
                     echo form_label("Ulica", 'address_street');
+                    ?>
+                    <div class="error-message-style">
+                        <?php
+                        echo form_error('address_street');
+                        ?>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="form-floating mb-3">
+                    <?php
+                    echo form_input('address_street', set_value('address_street'), 'class="form-control form-control-lg" placeholder="Nr domu"');
+                    echo form_label("Nr domu", 'address_street');
+                    ?>
+                    <div class="error-message-style">
+                        <?php
+                        echo form_error('address_street');
+                        ?>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="form-floating mb-3">
+                    <?php
+                    echo form_input('address_street', set_value('address_street'), 'class="form-control form-control-lg" placeholder="Nr mieszk."');
+                    echo form_label("Nr mieszk.", 'address_street');
                     ?>
                     <div class="error-message-style">
                         <?php
