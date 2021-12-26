@@ -20,7 +20,7 @@
 			$working_hours_final = "";
 
 			for ($i=0; $i < 7; $i++) { 
-				if(strlen($working_hours[$i])<9 || str_contains($working_hours[$i], "Nieczynne")){
+				if(strlen($working_hours[$i])<9 || str_contains($working_hours[$i], "Nieczynne") || $working_hours[$i]=="-"){
 					$working_hours[$i]="Nieczynne dzisiaj";
 				}
 				$working_hours_final .= $working_hours[$i]." ";
