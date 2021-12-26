@@ -12,6 +12,7 @@
                 <th>Ulica</th>
                 <th>Miasto</th>
                 <th>Kod pocztowy</th>
+                <th>Typ placówki</th>
                 <th>Godziny otwarcia</th>
                 <th>Opcje</th>
             </tr>
@@ -55,6 +56,11 @@
                         <td>
                             <?php
                             echo $address_explode[3];
+                            ?>
+                        </td>
+                        <td>
+                            <?php
+                            echo $crf['type'];
                             ?>
                         </td>
                         <td>
@@ -163,6 +169,7 @@
                 <th>Ulica</th>
                 <th>Miasto</th>
                 <th>Kod pocztowy</th>
+                <th>Typ placówki</th>
                 <th>Godziny otwarcia</th>
                 <th>Opcje</th>
             </tr>
