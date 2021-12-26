@@ -30,8 +30,10 @@
                         } else {
                             $days = explode(" ", $row);
                             foreach ($days as $day) {
-                                $working_hours[$i] = $day;
-                                $i++;
+                                if(strlen($day)>9){
+                                    $working_hours[$i] = $day;
+                                    $i++;
+                                }
                             }
                         }
                     }
