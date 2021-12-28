@@ -5,7 +5,8 @@
     <table class="table table-hover">
         <tbody>
 <?php
-    foreach ($cars as $car){
+    if($cars!=null){
+        foreach ($cars as $car){
 ?>
             <tr>
                 <td style="width: 65%" class="car-img"><img class="img-fluid" style="max-width:75%" src="<?php echo base_url(); ?>/assets/bil.png"></td>
@@ -67,6 +68,7 @@
             </tr>
 <?php 
     } 
+}
 ?>
         </tbody>
       </table>
