@@ -18,19 +18,19 @@
                                 </ol>
                                 <div class="carousel-inner">
                                         <div class="carousel-item active">
-                                                <img style="object-fit: fill; width:100%; height:100%;" src="https://www.elleman.pl/media/cache/big/uploads/media/default/0005/39/80d30ad1deab06645d8f32642ff7fd3bc121b310.jpeg" alt="First slide">
+                                                <img style="object-fit: cover; width:700px; height:700px" src="https://www.elleman.pl/media/cache/big/uploads/media/default/0005/39/80d30ad1deab06645d8f32642ff7fd3bc121b310.jpeg" alt="First slide">
                                                 <div class="carousel-caption d-none d-md-block">
 
                                                 </div>
                                         </div>
                                         <div class="carousel-item">
-                                                <img style="object-fit: fill; width:100%; height:100%;" src="https://motopedia.otomoto.pl/wp-content/uploads/2021/01/z24236394IHAudi-e-tron-GT.jpeg" alt="Second slide">
+                                                <img style="object-fit: cover; width:700px; height:700px" src="https://motopedia.otomoto.pl/wp-content/uploads/2021/01/z24236394IHAudi-e-tron-GT.jpeg" alt="Second slide">
                                                 <div class="carousel-caption d-none d-md-block">
 
                                                 </div>
                                         </div>
                                         <div class="carousel-item">
-                                                <img style="object-fit: fill; width:100%; height:100%;" src="https://villalittleparadise.com/wp-content/uploads/2021/05/Car-Rental.png" alt="Third slide">
+                                                <img style="object-fit: cover; width:700px; height:700px" src="https://villalittleparadise.com/wp-content/uploads/2021/05/Car-Rental.png" alt="Third slide">
                                                 <div class="carousel-caption d-none d-md-block">
 
                                                 </div>

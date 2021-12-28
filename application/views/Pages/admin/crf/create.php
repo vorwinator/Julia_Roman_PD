@@ -31,7 +31,7 @@
         </div>
         <div class="row">
             <h3 class="small-header-style text-center">Adres</h3>
-            <div class="col-md-8">
+            <div class="col-md-6">
                 <div class="form-floating mb-3">
                     <?php
                     echo form_input('address_street', set_value('address_street'), 'class="form-control form-control-lg" placeholder="Ulica"');
@@ -44,7 +44,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-2">
+            <div class="col-md-3">
                 <div class="form-floating mb-3">
                     <?php
                     echo form_input('address_housenumber', set_value('address_housenumber'), 'class="form-control form-control-lg" placeholder="Nr domu"');
@@ -57,7 +57,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-2">
+            <div class="col-md-3">
                 <div class="form-floating mb-3">
                     <?php
                     echo form_input('address_apartmentnumber', set_value('address_apartmentnumber'), 'class="form-control form-control-lg" placeholder="Nr mieszk."');
@@ -70,7 +70,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-8">
+            <div class="col-md-6">
                 <div class="form-floating mb-3">
                     <?php
                     echo form_input('address_city', set_value('address_city'), 'class="form-control form-control-lg" placeholder="Miasto"');
@@ -83,7 +83,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-6">
                 <div class="form-floating mb-3">
                     <?php
                     echo form_input('address_postalcode', set_value('address_postalcode'), 'class="form-control form-control-lg" placeholder="Kod pocztowy"');
