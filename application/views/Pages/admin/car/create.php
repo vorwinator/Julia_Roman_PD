@@ -30,6 +30,17 @@
                 </div>
                 <div class="form-floating mb-3">
                     <?php
+                    echo form_input('fuel', set_value('fuel'), 'class="form-control form-control-lg" placeholder="Paliwo"');
+                    echo form_label('Paliwo', 'fuel');
+                    ?>
+                    <div class="error-message-style">
+                        <?php
+                        echo form_error('fuel');
+                        ?>
+                    </div>
+                </div>
+                <div class="form-floating mb-3">
+                    <?php
                     echo form_input('release_year', set_value('release_year'), 'class="form-control form-control-lg" placeholder="Rok produkcji"');
                     echo form_label('Rok produkcji', 'release_year');
                     ?>
@@ -199,6 +210,7 @@
         </div>
         <div class="text-center mt-4">
             <?php
+            echo form_input('rental_status', 0, 'style="display:none;"');
             echo form_submit('submit', "Dodaj auto", 'class="btn btn-outline-primary btn-lg single-button-style"');
             ?>
         </div>
