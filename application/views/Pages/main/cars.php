@@ -58,7 +58,8 @@
                     </div>
                     <div class="big-bold">
                         <?php
-                            echo $car['price_per_day']."PLN/DZIEŃ";
+                            echo $car['price_per_day']." PLN/DZIEŃ<br>";
+                            echo $car["price_per_kilometer_with_chauffeur"]." PLN/KM<br>";
                         ?>
                         <a href=<?php echo site_url('car_all/details?id_car_details='.$car['id_car']);?>>
                             <button type="button" class="btn btn-primary btn-custom">Wybierz</button>
