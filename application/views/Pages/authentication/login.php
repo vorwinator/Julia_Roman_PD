@@ -10,7 +10,7 @@
             </div>
             <div class="form-floating mb-4">
                 <?php
-                echo form_input('email', set_value('email'), 'class="form-control form-control-lg"');
+                echo form_input('email', set_value('email'), 'class="form-control form-control-lg" placeholder="Email"');
                 echo form_label('Email', 'email');
                 ?>
                 <div class="error-message-style">
@@ -21,7 +21,7 @@
             </div>
             <div class="form-floating mb-3">
                 <?php
-                echo form_password('password', '', 'class="form-control form-control-lg"');
+                echo form_password('password', '', 'class="form-control form-control-lg" placeholder="Hasło"');
                 echo form_label('Hasło', 'password');
                 ?>
                 <div class="error-message-style">
