@@ -5,7 +5,7 @@
             $this->load->database();
         }
 
-        public function set($id_car, $id_acc, $crf_address)
+        public function set($id_car, $id_acc, $crf_address, $start_date, $end_date)
         {
             $query = $this->db->select("id_car_rental_facility")
             ->from('car_rental_facility')
@@ -13,8 +13,8 @@
             ->get();
             $id_car_rental_facility = $query->row();
 
-            if($this->input->post('return_to')!=null){
-                $return_to = $this->input->post('return_to');
+            if($_SESSION['return_to']!=null){
+                $return_to = $_SESSION['return_to'];
             }
             else{
                 $return_to = $crf_address;
@@ -23,11 +23,13 @@
 				'id_car' => $id_car,
 				'id_acc' => $id_acc,
 				'id_car_rental_facility' => $id_car_rental_facility->id_car_rental_facility,
-				'start_date' => $this->input->post('start_date'),
-				'end_date' => $this->input->post('end_date'),
+				'start_date' => $start_date,
+				'end_date' => $end_date,
 				'return_to' => $return_to
 			);
             $this->rental_status_on($id_car);
+
+            unset($_SESSION['return_to']);
 
 			return $this->db->insert('rental', $data);
         }
@@ -37,5 +39,22 @@
             return $this->db->set('rental_status', 1)
             ->where('id_car', $id_car)
             ->update('car');
+        }
+
+        public function get_user_rentals($id_acc)
+        {
+            $query = $this->db->select('*')
+            ->from('rental')
+            ->where('id_acc', $id_acc)
+            ->order_by('start_date')
+            ->get();
+
+            if ($query->num_rows() > 0) {
+                $respond = $query->result_array();
+            } else {
+                $respond = FALSE;
+            }
+
+            return $respond;
         }
     } 

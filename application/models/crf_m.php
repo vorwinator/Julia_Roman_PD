@@ -123,6 +123,29 @@
 		{
 			$query = $this->db->select('address')
 			->from('car_rental_facility')
+			->or_where('type',"Oba")
+			->or_where('type',"Odbiór")
+			->get();
+
+			if($query->num_rows() > 0){
+                $crfs_addresses = $query->result_object();
+				foreach ($crfs_addresses as $crf_address) {
+					$respond[$crf_address->address] = $crf_address->address;
+				}
+            }else{
+                $respond = FALSE;
+            }
+
+			return $respond;
+		}
+
+
+		public function get_return_to_addresses()
+		{
+			$query = $this->db->select('address')
+			->from('car_rental_facility')
+			->or_where('type',"Oba")
+			->or_where('type',"Zwrot")
 			->get();
 
 			if($query->num_rows() > 0){
