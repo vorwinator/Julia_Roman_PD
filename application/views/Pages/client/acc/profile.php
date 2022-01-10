@@ -11,22 +11,34 @@
                         <?php
                         echo form_input('firstname', $acc['firstname'], "placeholder=$acc[firstname] class=form-control form-control-lg");
                         echo form_label('Imie', 'firstname');
-                        echo form_error('firstname');
                         ?>
+                        <div class="error-message-style">
+                            <?php
+                            echo form_error('firstname');
+                            ?>
+                        </div>
                     </div>
                     <div class="form-floating mb-3">
                         <?php
                         echo form_input('lastname', $acc['lastname'], "placeholder=$acc[lastname] class=form-control form-control-lg");
                         echo form_label('Nazwisko', 'lastname');
-                        echo form_error('lastname');
                         ?>
+                        <div class="error-message-style">
+                            <?php
+                            echo form_error('lastname');
+                            ?>
+                        </div>
                     </div>
                     <div class="form-floating mb-3">
                         <?php
                         echo form_input('email', $acc['email'], "placeholder=$acc[email] class=form-control form-control-lg");
                         echo form_label('Email', 'email');
-                        echo form_error('email');
                         ?>
+                        <div class="error-message-style">
+                            <?php
+                            echo form_error('email');
+                            ?>
+                        </div>
                     </div>
                     <div class="text-center">
                         <?php
@@ -39,22 +51,34 @@
                         <?php
                         echo form_password('password', '', "placeholder=Obecne hasło class=form-control form-control-lg");
                         echo form_label('Obecne hasło', 'password');
-                        echo form_error('password');
                         ?>
+                        <div class="error-message-style">
+                            <?php
+                            echo form_error('password');
+                            ?>
+                        </div>
                     </div>
                     <div class="form-floating mb-3">
                         <?php
                         echo form_password('password_new', '', "placeholder='Nowe hasło' class=form-control form-control-lg");
                         echo form_label('Nowe hasło', 'password_new');
-                        echo form_error('password_new');
                         ?>
+                        <div class="error-message-style">
+                            <?php
+                            echo form_error('password_new');
+                            ?>
+                        </div>
                     </div>
                     <div class="form-floating mb-3">
                         <?php
                         echo form_password('repeat_password', '', "placeholder='Powtórz nowe hasło' class=form-control form-control-lg");
                         echo form_label('Powtórz nowe hasło', 'repeat_password');
-                        echo form_error('repeat_password');
                         ?>
+                        <div class="error-message-style">
+                            <?php
+                            echo form_error('repeat_password');
+                            ?>
+                        </div>
                     </div>
                     <div class="text-center">
                         <?php
