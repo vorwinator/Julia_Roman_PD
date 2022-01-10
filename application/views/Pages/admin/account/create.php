@@ -1,6 +1,5 @@
 <div class="container-fluid d-flex justify-content-center">
     <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
-        <form class="col-lg-9 pd-registr">
             <?php
             echo form_open(current_url(), 'class="col-lg-9 pd-registr"');
             ?>
