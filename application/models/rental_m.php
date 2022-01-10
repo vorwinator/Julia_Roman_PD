@@ -25,7 +25,8 @@
 				'id_car_rental_facility' => $id_car_rental_facility->id_car_rental_facility,
 				'start_date' => $start_date,
 				'end_date' => $end_date,
-				'return_to' => $return_to
+				'return_to' => $return_to,
+				'rent_type' => "Wynajem"
 			);
             $this->rental_status_on($id_car);
 
