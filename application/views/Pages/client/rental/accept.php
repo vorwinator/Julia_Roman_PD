@@ -7,24 +7,16 @@
             <h1 class="big-header-style text-center">Potwierdzenie wynajmu</h1>
             <div class="row">
                 <div class="etykieta">Wybrany termin</div>
-                <div class="col-md-5">
-                    <div class="form-floating mb-3">
+                <div class="col-md-12 border text-center">
+                    <div class="form-floating">
                         <span>
                             <?php
                             echo $_SESSION['start_date'];
                             ?>
                         </span>
-                    </div>
-                </div>
-                <div class="col-md-2">
-                    <div class="form-floating mb-3">
                         <span>
-                            -
+                            —
                         </span>
-                    </div>
-                </div>
-                <div class="col-md-5">
-                    <div class="form-floating mb-3">
                         <span>
                             <?php
                             echo $_SESSION['end_date'];
@@ -35,18 +27,26 @@
             </div>
             <div class="col-md-12">
                 <div class="etykieta">Placówka odbioru</div>
-                <?php
-                echo $_SESSION['crf_address'];
-                ?>
+                <div class="col-md-12 border text-center">
+                    <div class="form-floating">
+                        <?php
+                        echo $_SESSION['crf_address'];
+                        ?>
+                    </div>
+                </div>
                 <div class="etykieta">Placówka zwrotu</div>
-                <?php
-                if($_SESSION['return_to'] != null){
-                    echo $_SESSION['return_to'];
-                }
-                else{
-                    echo $_SESSION['crf_address'];
-                }
-                ?>
+                <div class="col-md-12 border text-center">
+                    <div class="form-floating">
+                        <?php
+                        if($_SESSION['return_to'] != null){
+                            echo $_SESSION['return_to'];
+                        }
+                        else{
+                            echo $_SESSION['crf_address'];
+                        }
+                        ?>
+                    </div>
+                </div>
             </div>
             <div class="kwota">
                 ŁĄCZNIE: 
