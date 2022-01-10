@@ -73,4 +73,23 @@
 
 			return $respond;
 		}
+
+
+		public function update_password($id)
+		{
+			$hash_pass = $this->input->post('password_new');
+			$hash_pass = md5($hash_pass);
+
+			$data = array(
+				'password' => $hash_pass
+			);
+
+			$this->db->set($data);
+
+			$this->db->where('id_acc', $id);
+
+			$respond = $this->db->update('account');
+			
+			return $respond;
+		}
     } 
