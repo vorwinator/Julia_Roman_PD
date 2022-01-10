@@ -37,21 +37,21 @@
                 <div class="col">
                     <div class="form-floating mb-3">
                         <?php
-                        echo form_input('password', '', "placeholder=Obecne hasło class=form-control form-control-lg");
+                        echo form_password('password', '', "placeholder=Obecne hasło class=form-control form-control-lg");
                         echo form_label('Obecne hasło', 'password');
                         echo form_error('password');
                         ?>
                     </div>
                     <div class="form-floating mb-3">
                         <?php
-                        echo form_input('password_new', '', "placeholder='Nowe hasło' class=form-control form-control-lg");
+                        echo form_password('password_new', '', "placeholder='Nowe hasło' class=form-control form-control-lg");
                         echo form_label('Nowe hasło', 'password_new');
                         echo form_error('password_new');
                         ?>
                     </div>
                     <div class="form-floating mb-3">
                         <?php
-                        echo form_input('repeat_password', '', "placeholder='Powtórz nowe hasło' class=form-control form-control-lg");
+                        echo form_password('repeat_password', '', "placeholder='Powtórz nowe hasło' class=form-control form-control-lg");
                         echo form_label('Powtórz nowe hasło', 'repeat_password');
                         echo form_error('repeat_password');
                         ?>
