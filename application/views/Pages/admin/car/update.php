@@ -25,6 +25,12 @@
                     </div>
                     <div class="form-floating mb-3">
                         <?php
+                        echo form_input('fuel', $car['fuel'], 'class="form-control form-control-lg" placeholder="Paliwo"');
+                        echo form_label('Paliwo', 'fuel');
+                        ?>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <?php
                         echo form_input('release_year', $car['release_year'], 'class="form-control form-control-lg" placeholder="Rok produkcji"');
                         echo form_label('Rok produkcji', 'release_year');
                         ?>
