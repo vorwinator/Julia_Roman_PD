@@ -57,4 +57,20 @@
 
             return $respond;
         }
+
+        public function get_rentals()
+        {
+            $query = $this->db->select('*')
+            ->from('rental')
+            ->order_by('start_date')
+            ->get();
+
+            if ($query->num_rows() > 0) {
+                $respond = $query->result_array();
+            } else {
+                $respond = FALSE;
+            }
+
+            return $respond;
+        }
     } 
