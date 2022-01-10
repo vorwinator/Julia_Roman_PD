@@ -59,5 +59,6 @@ $route['car_rental_facility/(:any)'] = 'car_rental_facility/$1';
 $route['acc/(:any)'] = 'acc/$1';
 $route['car_all/(:any)'] = 'car_all/$1';
 $route['rental/(:any)'] = 'rental/$1';
+$route['rent/(:any)'] = 'rent/$1';
 $route['crf/(:any)'] = 'crf/$1';
 
