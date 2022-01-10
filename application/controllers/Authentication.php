@@ -21,7 +21,7 @@
 
             $data['info']="Pomyślnie wylogowano";
 
-            $this->load->view('templates/header', $data);
+            $this->load->view('templates/header_client', $data);
             $this->load->view('pages/authentication/login');//temp
             $this->load->view('templates/footer');            
         }
@@ -36,7 +36,7 @@
                     redirect('client/account/profile');//temp
                 }
                 else{
-                    redirect('main/index');//temp
+                    redirect('main/index');
                 }
             }
             else{
@@ -49,13 +49,13 @@
                     {
                         if(isset($_GET['info'])){
                             $data['info']=$_GET['info'];
-                            $this->load->view('templates/header', $data);
+                            $this->load->view('templates/header_client', $data);
                         }
                         else{
-                            $this->load->view('templates/header');
+                            $this->load->view('templates/header_client');
                         }
                         $this->load->view('pages/authentication/login');
-                        $this->load->view('templates/footer');
+                        $this->load->view('templates/footer_client');
                     }
                     else
                     {
@@ -67,9 +67,9 @@
                         if($pass->password!=md5($this->input->post('password'))){
                             $data['info']="Podano nieprawidłowe dane logowania";
 
-                            $this->load->view('templates/header', $data);
+                            $this->load->view('templates/header_client', $data);
                             $this->load->view('pages/authentication/login');
-                            $this->load->view('templates/footer');
+                            $this->load->view('templates/footer_client');
                         }
                         else{
                             $account=$this->authentication_m->get_acc_by_email($this->input->post('email'));
@@ -81,15 +81,13 @@
                             $_SESSION['login_acc_type']=$account->acc_type;
 
                             if($_SESSION['login_acc_type']==null){
-                                $data['info']="Wystąpił niespodziewany błąd.";//źle
-                                redirect('main/index');//temp
+                                $data['info']="Wystąpił niespodziewany błąd.";
+                                redirect('main/index');
                             }
 
                             if($_SESSION['login_acc_type']==1)
                             {
-                                $this->load->view('templates/header');
-                                $this->load->view('pages/admin/account/create');//temp
-                                $this->load->view('templates/footer');
+                                redirect('admin/account/create');
                             }
                             else{
                                 redirect('main/index');
