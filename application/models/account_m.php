@@ -55,4 +55,22 @@
 			$this->unit->run($respond, 'is_array', 'Czy dane o koncie są dostarczane w formie tabeli danych.');
             return $respond;
 		}
+
+
+		public function edit_acc_by_id($id)
+		{
+			$data = array(
+				'email' => $this->input->post('email'),
+				'firstname' => $this->input->post('firstname'),
+				'lastname' => $this->input->post('lastname')
+			);
+
+			$this->db->set($data);
+
+			$this->db->where('id_acc', $id);
+
+			$respond = $this->db->update('account');
+
+			return $respond;
+		}
     } 
