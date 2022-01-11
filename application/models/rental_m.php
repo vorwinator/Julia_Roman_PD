@@ -5,7 +5,7 @@
             $this->load->database();
         }
 
-        public function set($id_car, $id_acc, $crf_address, $start_date, $end_date)
+        public function set($id_car, $id_acc, $crf_address, $start_date, $end_date, $rent_type)
         {
             $query = $this->db->select("id_car_rental_facility")
             ->from('car_rental_facility')
@@ -26,7 +26,7 @@
 				'start_date' => $start_date,
 				'end_date' => $end_date,
 				'return_to' => $return_to,
-				'rent_type' => "Wynajem"
+				'rent_type' => $rent_type
 			);
             $this->rental_status_on($id_car);
 
