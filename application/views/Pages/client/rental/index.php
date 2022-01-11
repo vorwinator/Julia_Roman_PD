@@ -1,6 +1,5 @@
 <div class="container-fluid d-flex justify-content-center">
     <div class="col-md-8 col-lg-6 col-xl-4 offset-1">
-        <form class="col-lg-10 pd-kaucja">
             <?php
             echo form_open(current_url(), 'class="col-lg-10 pd-kaucja"');
             ?>
@@ -94,9 +93,6 @@
                 echo form_dropdown('return_to', $return_to_options, '', 'class="col-md-12 form-control-lg"');
                 ?>
             </div>
-            <!-- <div class="kwota">
-                ŁĄCZNIE: 1300 PLN
-            </div> -->
             <div class="text-center mt-4">
                 <?php
                 echo form_submit('submit', "Wynajmij", 'class="btn btn-outline-primary btn-lg single-button-style"');
