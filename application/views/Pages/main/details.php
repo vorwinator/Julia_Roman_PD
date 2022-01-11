@@ -106,11 +106,6 @@
                                         echo $car['deposit'];
                                         ?>
                                 </li>
-                                <li>Typ samochodu:
-                                        <?php
-                                        echo $car['release_year'];
-                                        ?>
-                                </li>
                                 <li>Ubezpieczenie:
                                         <?php
                                         echo $car['insurance'];
@@ -143,7 +138,7 @@
                                         echo $car["price_per_kilometer_with_chauffeur"];
                                         ?>
                                         PLN/KM
-                                        <br><a role="button" class="btn btn-primary full-width-btn" href="przejazd.html">Zamów przejazd<br>z kierowcą</a>
+                                        <br><a role="button" class="btn btn-primary full-width-btn" href=<?php echo site_url('client/rental/car_ride?id_car_rent=' . $car['id_car']); ?>>Zamów przejazd<br>z kierowcą</a>
                                 </div>
                         </div>
                 </div>
