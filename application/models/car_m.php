@@ -17,6 +17,7 @@
 				'release_year' => $this->input->post('release_year'),
 				'fuel' => $this->input->post('fuel'),
 				'price_per_day' => $this->input->post('price_per_day'),
+				'price_per_kilometer_with_chauffeur' => $this->input->post('price_per_kilometer_with_chauffeur'),
 				'mileage' => $this->input->post('mileage'),
 				'rental_status' => $this->input->post('rental_status'),
 				'insurance' => $this->input->post('insurance')
@@ -112,6 +113,7 @@
 				'release_year' => $this->input->post('release_year'),
 				'fuel' => $this->input->post('fuel'),
 				'price_per_day' => $this->input->post('price_per_day'),
+				'price_per_kilometer_with_chauffeur' => $this->input->post('price_per_kilometer_with_chauffeur'),
 				'mileage' => $this->input->post('mileage'),
 				'rental_status' => $this->input->post('rental_status'),
 				'insurance' => $this->input->post('insurance')
