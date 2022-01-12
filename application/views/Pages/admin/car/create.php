@@ -1,7 +1,7 @@
 <div class="container-fluid d-flex justify-content-center">
     <div class="col-md-8 col-lg-6 col-xl-6 offset-1">
         <?php
-        echo form_open(current_url(), 'class="col-lg-10 pd-bottom"');
+        echo form_open_multipart(current_url(), 'class="col-lg-10 pd-bottom"');
         ?>
         <h1 class="big-header-style text-center">Dodaj samochód</h1>
         <div class="row">
@@ -206,6 +206,19 @@
                         ?>
                     </div>
                 </div>
+            </div>
+        </div>
+        <div class="text-center mt-4">
+            <?php
+            echo form_label('Dodaj zdjęcia pojazdu', 'pictures');
+            echo form_upload(array('pictures'), '', 'class="form-control form-control-lg" multiple="multiple" name="pictures[]"');
+            ?>
+            <div class="error-message-style">
+                <?php
+                if(isset($pictures_error)){
+                    echo $pictures_error;
+                }
+                ?>
             </div>
         </div>
         <div class="text-center mt-4">
