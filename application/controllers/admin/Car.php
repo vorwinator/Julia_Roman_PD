@@ -37,17 +37,70 @@
                 $this->render_page($this->directory_path, 'create', '');
 			}
 			else{
-                if($this->car_m->set_car()){
-                    if($this->car_m->set_car_details()){
-                        redirect('admin/car/cars?info=Dodano nowe auto');
+                $uploadOk = 1;
+                if (!file_exists("./assets/pictures/" . $_POST['brand'] . "/" . $_POST['model'])) {
+                    mkdir("./assets/pictures/" . $_POST['brand'] . "/" . $_POST['model'], 0777, true);
+                }
+                $number_of_pictures = count($_FILES['pictures']['name']);
+                $target_dir = "./assets/pictures/" . $_POST['brand'] . "/" . $_POST['model'] . "/";
+                for ($i=0; $i < $number_of_pictures; $i++) {
+                    $target_file[$i] = $target_dir . basename($_FILES["pictures"]["name"][$i]);
+                    $imageFileType = strtolower(pathinfo($target_file[$i], PATHINFO_EXTENSION));
+                    // sprawdzenie czy plik już istnieje
+                    if (file_exists($target_file[$i])) {
+                        $data['pictures_error'] = "Plik " . $_FILES["pictures"]["name"][$i] . " już istnieje.";
+                        $uploadOk = 0;
                     }
+                    // sprawdzenie rozmiaru pliku
+                    if ($_FILES["pictures"]["size"][$i] > 500000) {
+                        $data['pictures_error'] = "Plik " . $_FILES["pictures"]["name"][$i] . " jest zbyt duży.";
+                        $uploadOk = 0;
+                    }
+                    // dopuszczenie tylko wybranych formatów
+                    if ($imageFileType != "jpg" && $imageFileType != "png") {
+                        $data['pictures_error'] = "Plik " . $_FILES["pictures"]["name"][$i] . " powinien być z roszerzeniem .jpg lub .png.";
+                        $uploadOk = 0;
+                    }
+                    // sprawdzenie czy obraz jest prawdziwym obrazem
+                    $check = getimagesize($_FILES["pictures"]["tmp_name"][$i]);
+                    if ($check !== false) {
+                        $data['success'] = "Plik " . $_FILES["pictures"]["name"][$i] . " jest obrazem " . $check['mime'] . ".";
+                    } 
+                    else {
+                        $data['pictures_error'] = "Plik " . $_FILES["pictures"]["name"][$i] . " nie jest obrazem.";
+                        $uploadOk = 0;
+                    }
+                }
+                // sprawdzenie czy wystąpił błąd
+                if ($uploadOk == 1) {
+                    //upload plików
+                    for ($i=0; $i < $number_of_pictures; $i++) { 
+                        if (move_uploaded_file($_FILES["pictures"]["tmp_name"][$i], $target_file[$i])) {
+                            $data['success2'] = "Plik " . htmlspecialchars(basename($_FILES["pictures"]["name"][$i])) . " został wgrany.";
+                        } 
+                        else {
+                            $data['pictures_error'] = "Plik " . htmlspecialchars(basename($_FILES["pictures"]["name"][$i])) . " nie został wgrany. Nieznany błąd.";
+                            $uploadOk = 0;
+                        }
+                    }
+                }
+                
+                if($uploadOk == 1){
+                    if($this->car_m->set_car($_FILES["pictures"]["name"])){
+                        if($this->car_m->set_car_details()){
+                            redirect('admin/car/cars?info=Dodano nowe auto');
+                        }
+                        else{
+                            $data['info']="Niepowodzenie";
+                            $this->render_page($this->directory_path, "create", $data);
+                        }
+                    } 
                     else{
                         $data['info']="Niepowodzenie";
                         $this->render_page($this->directory_path, "create", $data);
                     }
                 } 
-                else{
-                    $data['info']="Niepowodzenie";
+                else {
                     $this->render_page($this->directory_path, "create", $data);
                 }
             }
