@@ -13,28 +13,41 @@
                         <div id="carouselExampleIndicators" class="carousel carousel-car slide" data-bs-ride="carousel">
                                 <ol class="carousel-indicators">
                                         <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"></li>
-                                        <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"></li>
-                                        <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"></li>
+                                        <?php
+                                        $pic = explode(' ', $car['pictures']);
+                                        $number_of_pics = count($pic)-1;
+                                        if($number_of_pics<1) $number_of_pics = 1;
+                                        for ($i = 1; $i < $number_of_pics; $i++) {
+                                        ?>
+                                        <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="<?php echo $i;?>"></li>
+                                        <?php
+                                        }
+                                        ?>
                                 </ol>
                                 <div class="carousel-inner">
-                                        <div class="carousel-item active">
-                                                <img style="object-fit: cover; width:700px; height:700px" src="https://www.elleman.pl/media/cache/big/uploads/media/default/0005/39/80d30ad1deab06645d8f32642ff7fd3bc121b310.jpeg" alt="First slide">
-                                                <div class="carousel-caption d-none d-md-block">
+                                        <?php
+                                        for ($i = 0; $i < $number_of_pics; $i++) {
+                                                $src = base_url() . "/" . "assets/pictures/" . $car['brand'] . "/" . $car['model'] . "/" . $pic[$i];
+                                                if ($i == 0) {
+                                        ?>
+                                                        <div class="carousel-item active">
+                                                                <img style="object-fit: cover; width:700px; height:700px" src="<?php echo $src; ?>" alt="First slide">
+                                                                <div class="carousel-caption d-none d-md-block">
 
-                                                </div>
-                                        </div>
-                                        <div class="carousel-item">
-                                                <img style="object-fit: cover; width:700px; height:700px" src="https://motopedia.otomoto.pl/wp-content/uploads/2021/01/z24236394IHAudi-e-tron-GT.jpeg" alt="Second slide">
-                                                <div class="carousel-caption d-none d-md-block">
+                                                                </div>
+                                                        </div>
+                                                <?php } else {
+                                                ?>
+                                                        <div class="carousel-item">
+                                                                <img style="object-fit: cover; width:700px; height:700px" src="<?php echo $src; ?>" alt="Second slide">
+                                                                <div class="carousel-caption d-none d-md-block">
 
-                                                </div>
-                                        </div>
-                                        <div class="carousel-item">
-                                                <img style="object-fit: cover; width:700px; height:700px" src="https://villalittleparadise.com/wp-content/uploads/2021/05/Car-Rental.png" alt="Third slide">
-                                                <div class="carousel-caption d-none d-md-block">
-
-                                                </div>
-                                        </div>
+                                                                </div>
+                                                        </div>
+                                        <?php
+                                                }
+                                        }
+                                        ?>
                                 </div>
                                 <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-bs-slide="prev">
                                         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
