@@ -8,6 +8,20 @@
 
 		public function delete($id)
 		{
+			$car = $this->get_car_by_id($id);
+			$pics = explode(' ', $car['pictures']);
+			$number_of_pictures = count($pics)-1;
+			
+			for ($i=0; $i < $number_of_pictures; $i++) {
+				$src = "./" . "assets/pictures/" . $car['brand'] . "/" . $car['model'] . "/" . $pics[$i];
+				if (file_exists($src)) unlink($src);
+			}
+			$src = "./" . "assets/pictures/" . $car['brand'] . "/" . $car['model'];
+			if (file_exists($src)) rmdir($src);
+
+			$src = "./" . "assets/pictures/" . $car['brand'];
+			if (file_exists($src)) rmdir($src);
+
 			return $this->db->where('id_car', $id)->delete('car');
 		}
 
