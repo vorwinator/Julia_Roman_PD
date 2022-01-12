@@ -11,8 +11,12 @@
 			return $this->db->where('id_car', $id)->delete('car');
 		}
 
-        public function set_car()
+        public function set_car($pictures)
 		{
+			$pictures_string = "";
+			foreach($pictures as $picture){
+				$pictures_string = $pictures_string . $picture . " ";
+			}
 			$data = array(
 				'release_year' => $this->input->post('release_year'),
 				'fuel' => $this->input->post('fuel'),
@@ -20,7 +24,8 @@
 				'price_per_kilometer_with_chauffeur' => $this->input->post('price_per_kilometer_with_chauffeur'),
 				'mileage' => $this->input->post('mileage'),
 				'rental_status' => $this->input->post('rental_status'),
-				'insurance' => $this->input->post('insurance')
+				'insurance' => $this->input->post('insurance'),
+				'pictures' => $pictures_string
 			);
 			return $this->db->insert('car', $data);
 		}
