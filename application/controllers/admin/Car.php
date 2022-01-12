@@ -38,7 +38,6 @@
 			}
 			else{
                 $uploadOk = 1;
-                $img_type = "";
                 if (!file_exists("./assets/pictures/" . $_POST['brand'] . "/" . $_POST['model'])) {
                     mkdir("./assets/pictures/" . $_POST['brand'] . "/" . $_POST['model'], 0777, true);
                 }
@@ -46,12 +45,12 @@
                 $target_dir = "./assets/pictures/" . $_POST['brand'] . "/" . $_POST['model'] . "/";
                 for ($i=0; $i < $number_of_pictures; $i++) {
                     if(str_contains($_FILES["pictures"]["name"][$i], '.png')){
-                        $img_type = ".png";
+                        $_FILES["pictures"]["name"][$i] = $i . ".png";
                     }
                     if(str_contains($_FILES["pictures"]["name"][$i], '.jpg')){
-                        $img_type = ".jpg";
+                        $_FILES["pictures"]["name"][$i] = $i . ".jpg";
                     }
-                    $target_file[$i] = $target_dir . $i . $img_type;
+                    $target_file[$i] = $target_dir . $_FILES["pictures"]["name"][$i];
                     $imageFileType = strtolower(pathinfo($target_file[$i], PATHINFO_EXTENSION));
                     // sprawdzenie czy plik już istnieje
                     if (file_exists($target_file[$i])) {
