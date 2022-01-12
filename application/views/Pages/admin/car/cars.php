@@ -61,7 +61,11 @@
                         ?>
                     </td>
                     <td style="width: 10%">
-                        <img class="img-fluid" style="max-width:50%" src="bil.png" alt="Image not found" onerror="this.onerror=null;this.src=' <?php echo base_url(); ?>/assets/check.jpg';" />
+                        <?php
+                        $pic = explode(' ', $car['pictures']);
+                        $src = base_url() . "/" . "assets/pictures/".$car['brand']."/".$car['model']."/".$pic[0];
+                        ?>
+                        <img class="img-fluid" style="max-width:50%" src="<?php echo $src; ?>" alt="Image not found" onerror="this.onerror=null;this.src=' <?php echo base_url(); ?>/assets/check.jpg';" />
                     </td>
                     <td>
                         <a href=<?php echo site_url('admin/car/update?id_car_update=' . $car['id_car']); ?>><button type="button" class="btn btn-primary btn-custom">Edytuj</button></a>
