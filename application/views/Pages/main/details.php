@@ -15,11 +15,11 @@
                                         <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"></li>
                                         <?php
                                         $pic = explode(' ', $car['pictures']);
-                                        $number_of_pics = count($pic)-1;
-                                        if($number_of_pics<1) $number_of_pics = 1;
+                                        $number_of_pics = count($pic) - 1;
+                                        if ($number_of_pics < 1) $number_of_pics = 1;
                                         for ($i = 1; $i < $number_of_pics; $i++) {
                                         ?>
-                                        <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="<?php echo $i;?>"></li>
+                                                <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="<?php echo $i; ?>"></li>
                                         <?php
                                         }
                                         ?>
@@ -31,7 +31,7 @@
                                                 if ($i == 0) {
                                         ?>
                                                         <div class="carousel-item active">
-                                                                <img style="object-fit: cover; width:700px; height:700px" src="<?php echo $src; ?>" alt="First slide">
+                                                                <img style="object-fit: cover; width:700px; height:700px" src="<?php echo $src; ?>" alt="First slide" onerror="this.onerror=null;this.src=' <?php echo base_url(); ?>/assets/check.jpg';">
                                                                 <div class="carousel-caption d-none d-md-block">
 
                                                                 </div>
