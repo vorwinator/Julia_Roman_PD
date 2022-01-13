@@ -22,7 +22,7 @@
             $data['info']="Pomyślnie wylogowano";
 
             $this->load->view('templates/header_client', $data);
-            $this->load->view('pages/authentication/login');//temp
+            $this->load->view('pages/authentication/login');
             $this->load->view('templates/footer');            
         }
 
@@ -30,10 +30,10 @@
         public function login(){
             if(isset($_SESSION['login_id_acc'])){
                 if($_SESSION['login_acc_type']==1){
-                    redirect('admin/account/create');//temp
+                    redirect('admin/account/rent/index');
                 }
                 else if($_SESSION['login_acc_type']==0){
-                    redirect('client/account/profile');//temp
+                    redirect('client/account/profile');
                 }
                 else{
                     redirect('main/index');
@@ -87,7 +87,7 @@
 
                             if($_SESSION['login_acc_type']==1)
                             {
-                                redirect('admin/account/create');
+                                redirect('admin/account/rent/index');
                             }
                             else{
                                 redirect('main/index');
