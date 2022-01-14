@@ -5,6 +5,7 @@
             parent::__construct();
 
             $this->form_validation->set_message('required', 'Musisz wpisać {field}.');
+            $this->form_validation->set_message('integer', '{field} muszą być liczbą.');
             $this->form_validation->set_message('valid_email', 'To nie jest prawidłowy email.');
             $this->form_validation->set_message('matches', '{field} musi być takie samo jak {param}.');
 
