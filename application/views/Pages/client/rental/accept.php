@@ -8,6 +8,9 @@
                 <div class="etykieta">Wybrany termin</div>
                 <div class="col-md-12 border text-center">
                     <div class="form-floating">
+                        <?php
+                        if ($_SESSION['rent_type'] == "Wynajem"){
+                        ?>
                         <span>
                             <?php
                             echo $_SESSION['start_date'];
@@ -21,10 +24,25 @@
                             echo $_SESSION['end_date'];
                             ?>
                         </span>
+                        <?php 
+                        }
+                        if ($_SESSION['rent_type'] == "Przejazd z kierowcą"){
+                        ?>
+                        <span>
+                            <?php
+                            echo $_SESSION['date'];
+                            ?>
+                        </span>
+                        <?php
+                        }
+                        ?>
                     </div>
                 </div>
             </div>
             <div class="col-md-12">
+                <?php
+                if ($_SESSION['rent_type'] == "Wynajem"){
+                ?>
                 <div class="etykieta">Placówka odbioru</div>
                 <div class="col-md-12 border text-center">
                     <div class="form-floating">
@@ -46,6 +64,29 @@
                         ?>
                     </div>
                 </div>
+                <?php 
+                }
+                if ($_SESSION['rent_type'] == "Przejazd z kierowcą"){
+                ?>
+                <div class="etykieta">Adres odbioru</div>
+                <div class="col-md-12 border text-center">
+                    <div class="form-floating">
+                        <?php
+                        echo $_SESSION['start_address'];
+                        ?>
+                    </div>
+                </div>
+                <div class="etykieta">Adres docelowy</div>
+                <div class="col-md-12 border text-center">
+                    <div class="form-floating">
+                        <?php
+                        echo $_SESSION['finish_address'];
+                        ?>
+                    </div>
+                </div>
+                <?php
+                }
+                ?>
             </div>
             <div class="kwota">
                 ŁĄCZNIE: 
