@@ -12,7 +12,6 @@
                 <th>Data wypożyczenia</th>
                 <th>Data zwrotu</th>
                 <th>Placówka zwrotu</th>
-                <th>Typ</th>
                 <th></th>
             </tr>
         </thead>
@@ -57,11 +56,6 @@
                     ?>
                 </td>
                 <td>
-                    <?php
-                    echo $rent['rent_type']
-                    ?>
-                </td>
-                <td>
                     <button type="button" class="btn btn-danger btn-custom">Usuń</button>
                 </td>
             </tr>
@@ -76,7 +70,6 @@
                 <th>Data wypożyczenia</th>
                 <th>Data zwrotu</th>
                 <th>Placówka zwrotu</th>
-                <th>Typ</th>
                 <th></th>
             </tr>
         </tfoot>
