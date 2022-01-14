@@ -3,7 +3,7 @@
         <h1 class="big-header-style text-center">Lista wynajmów - klient</h1>
     </div>
     <?php
-    foreach ($rentals as $rental) {
+    if($rentals!=null)foreach ($rentals as $rental) {
     ?>
         <div class="container rounded wynajem-container">
             <div class="border padding-custom mt-2">

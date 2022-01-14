@@ -18,7 +18,7 @@
         </thead>
         <tbody>
         <?php
-        foreach ($rentals as $rent){
+        if ($rentals != null) foreach ($rentals as $rent){
         ?>
             <tr>
                 <td>
