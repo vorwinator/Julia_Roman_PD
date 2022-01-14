@@ -30,7 +30,7 @@
         public function login(){
             if(isset($_SESSION['login_id_acc'])){
                 if($_SESSION['login_acc_type']==1){
-                    redirect('admin/account/rent/index');
+                    redirect('admin/rent/index');
                 }
                 else if($_SESSION['login_acc_type']==0){
                     redirect('client/account/profile');
@@ -87,7 +87,7 @@
 
                             if($_SESSION['login_acc_type']==1)
                             {
-                                redirect('admin/account/rent/index');
+                                redirect('admin/rent/index');
                             }
                             else{
                                 redirect('main/index');
