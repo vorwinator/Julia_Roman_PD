@@ -2,6 +2,10 @@
     color: #1C3738;
 }
 
+.desc{
+    padding-left: 2%;
+    padding-bottom: 5%;
+}
 
 .nav-container1{
     width: 30%;
@@ -21,6 +25,8 @@
 
 .carousel-abc{
     height:500px;
+    padding-bottom: 5%;
+    padding-top: 5%;
   }
 
 body { background-color: #F4FFF8;}
