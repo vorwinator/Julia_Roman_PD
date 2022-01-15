@@ -6,10 +6,8 @@
             <h1 class="big-header-style text-center">Zarejestruj się</h1>
             <div class="pd-top">
                 <div class="form-floating mb-4">
-                    <!-- <input type="imie" class="form-control form-control-lg" placeholder="imie" />
-                    <label for="imie">Imię</label> -->
                     <?php
-                    echo form_input('email', set_value('email'), 'class="form-control form-control-lg"');
+                    echo form_input('email', set_value('email'), 'class="form-control form-control-lg" placeholder="Email"');
                     echo form_label('Email', 'email');
                     ?>
                     <div class="error-message-style">
@@ -19,39 +17,30 @@
                     </div>
                 </div>
                 <div class="form-floating mb-4">
-                    <!-- <input type="surname" class="form-control form-control-lg" placeholder="surname" />
-                    <label for="surname">Nazwisko</label> -->
                     <?php
-                    echo form_input('firstname', set_value('firstname'), 'class="form-control form-control-lg"');
+                    echo form_input('firstname', set_value('firstname'), 'class="form-control form-control-lg" placeholder="Imię"');
                     echo form_label('Imię', 'firstname');
                     ?>
                 </div>
                 <div class="form-floating mb-4">
-                    <!-- <input type="email" class="form-control form-control-lg" placeholder="email" />
-                    <label for="email">Email</label> -->
                     <?php
-                    echo form_input('lastname', set_value('lastname'), 'class="form-control form-control-lg"');
+                    echo form_input('lastname', set_value('lastname'), 'class="form-control form-control-lg" placeholder="Nazwisko"');
                     echo form_label('Nazwisko', 'lastname');
                     ?>
                 </div>
                 <div class="form-floating mb-3">
-                    <!-- <input type="password" class="form-control form-control-lg" placeholder="password" />
-                    <label for="password">Hasło</label> -->
                     <?php
-                    echo form_password('password', '', 'class="form-control form-control-lg"');
+                    echo form_password('password', '', 'class="form-control form-control-lg" placeholder="Hasło"');
                     echo form_label('Hasło', 'password');
                     ?>
                 </div>
                 <div class="form-floating mb-3">
-                    <!-- <input type="repeat" class="form-control form-control-lg" placeholder="repeat" />
-                    <label for="repeat">Powtórz hasło</label> -->
                     <?php
-                    echo form_password('password2', '', 'class="form-control form-control-lg"');
+                    echo form_password('password2', '', 'class="form-control form-control-lg" placeholder="Powtórz hasło"');
                     echo form_label('Powtórz hasło', 'password2');
                     ?>
                 </div>
                 <div class="text-center mt-4">
-                    <!-- <button type="button" class="btn btn-primary btn-lg single-button-style">Utwórz konto</button> -->
                     <?php
                     echo form_input('acc_type', 0, 'style="display:none;"');
                     echo form_submit('submit', "Utwórz konto", 'class="btn btn-primary btn-lg single-button-style"');
