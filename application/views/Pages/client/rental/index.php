@@ -11,7 +11,7 @@
                     $pic = explode(' ', $car['pictures']);
                     $src = base_url() . "/" . "assets/pictures/" . $car['brand'] . "/" . $car['model'] . "/" . $pic[0];
                     ?>
-                    <img width="100%" src="<?php echo $src(); ?>" onerror="this.onerror=null;this.src=' <?php echo base_url(); ?>/assets/check.jpg';">
+                    <img width="100%" src="<?php echo $src; ?>" onerror="this.onerror=null;this.src=' <?php echo base_url(); ?>/assets/check.jpg';">
                 </div>
                 <div class="col-md-6">
                     <ul>
