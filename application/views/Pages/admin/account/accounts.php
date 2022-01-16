@@ -17,7 +17,7 @@
         </thead>
         <tbody>
             <?php
-            foreach ($accounts as $account){
+            if ($accounts != null) foreach ($accounts as $account){
             ?>
             <tr>
                 <td>

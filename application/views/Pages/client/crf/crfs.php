@@ -4,7 +4,7 @@
     </div>
     <div class="row pd-space">
         <?php
-        foreach($crfs as $crf){
+        if ($crfs != null) foreach($crfs as $crf){
             $address_explode = explode(" ", $crf['address']);
             if($crf['type']=="Oba")$crf_purpose="Zwroty i odbiory";
             if($crf['type']=="Zwrot")$crf_purpose="Zwroty";

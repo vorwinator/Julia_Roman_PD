@@ -21,7 +21,7 @@
         </thead>
         <tbody>
             <?php
-            foreach ($cars as $car) {
+            if ($cars != null) foreach ($cars as $car) {
             ?>
                 <tr>
                     <td>
