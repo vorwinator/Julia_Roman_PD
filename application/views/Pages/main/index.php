@@ -3,7 +3,7 @@
         <h1 class="big-header-style text-center">Wypożyczalnia samochodów</h1>
     </div>
 </div>
-<div class="desc">Od ponad 20 lat zajmujemy się wypożyczaniem samochodów na terenie całego kraju, aby ułatwić podróżującym transport i zapewnić szybkie oraz bezpieczne usługi.</p>
+<div class="desce">Od ponad 20 lat zajmujemy się wypożyczaniem samochodów na terenie całego kraju, aby ułatwić podróżującym transport i zapewnić szybkie oraz bezpieczne usługi.</div>
 <div id="carouselExampleIndicators" class="carousel carousel-abc slide" data-bs-ride="carousel">
           <ol class="carousel-indicators">
             <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"></li>
@@ -15,7 +15,7 @@
               <img class="d-block w-100" style="object-fit: cover; width: 100%; height:500px" src="https://www.elleman.pl/media/cache/big/uploads/media/default/0005/39/80d30ad1deab06645d8f32642ff7fd3bc121b310.jpeg" alt="First slide">  
               <div class="carousel-caption d-none d-md-block">
                   <h5>Nasza oferta</h5>
-                  <p>Posiadamy ponad 1700 aut osobowych, ciężarowych i innych</p>
+                  <p>Posiadamy szeroki asortyment osobowych, ciężarowych i innych</p>
               </div>
           </div>
             <div class="carousel-item">
@@ -29,7 +29,7 @@
               <img class="d-block w-100" style="object-fit: cover; width: 100%; height:500px" src="https://villalittleparadise.com/wp-content/uploads/2021/05/Car-Rental.png" alt="Third slide">
               <div class="carousel-caption d-none d-md-block">
                   <h5>Usługi szoferskie</h5>
-                  <p>Oferujemy także możliwość wynajęcia kierowcy</p>
+                  <p>Oferujemy także możliwość zamówienia przejazdu z kierowcą</p>
               </div>
             </div>
           </div>
