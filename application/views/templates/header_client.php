@@ -58,8 +58,6 @@
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <a class="dropdown-item text-colour" href=<?php echo site_url('car_all/cars'); ?>>Lista aut</a>
                         <a class="dropdown-item text-colour" href=<?php echo site_url('client/crf/crfs'); ?>>Lista placówek</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item text-colour" href="#">O nas</a>
                     </div>
                 </li>
                 <li class="nav-item">
