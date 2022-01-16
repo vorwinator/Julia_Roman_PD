@@ -9,6 +9,7 @@
             $this->load->model('account_m');
         }
         public function profile(){
+            $data['title'] = "Profil";
             if(isset($_POST["submit"])){
                 $this->form_validation->set_rules('email', 'Email', 'required|valid_email');
                 $this->form_validation->set_rules('firstname', 'Imię', 'required');

@@ -12,6 +12,8 @@
 
         public function create()
         {
+            $data['title'] = "Dodawanie samochodu";
+
             $this->form_validation->set_rules('release_year', 'Rok produkcji', 'required');
             $this->form_validation->set_rules('fuel', 'Rodzaj paliwa', 'required');
 			$this->form_validation->set_rules('price_per_day', 'Cenę za dobę', 'required');
@@ -121,6 +123,7 @@
 
         public function cars()
         {
+            $data['title'] = "Lista samochodów";
             if(isset($_GET['info']))$data['info']=$_GET['info'];
             $data['welcome'] = "To jest lista aut";
             $data['cars'] = $this->car_m->get_cars_with_details();
@@ -131,6 +134,7 @@
 
         public function update()
         {
+            $data['title'] = "Edycja samochodu";
             if(isset($_GET['info']))$data['info']=$_GET['info'];
             if(isset($_GET['id_car_update']))$_SESSION['selected_car_id']=$_GET['id_car_update'];
             $data['car']=$this->car_m->get_car_by_id($_SESSION['selected_car_id']);
@@ -175,6 +179,8 @@
 
         public function delete()
         {
+            $data['title'] = "Usunięto samochód";
+
             if(isset($_GET['id_car_delete'])){
                 $this->car_m->delete($_GET['id_car_delete']);
                 $data['info']="Gratuluję. Usunięto samochód.";

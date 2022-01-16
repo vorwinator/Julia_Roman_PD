@@ -10,6 +10,8 @@
         }
 
         public function create(){
+            $data['title'] = "Dodawanie konta admina";
+
             $this->form_validation->set_rules('email', 'Email', 'required|valid_email');
 			$this->form_validation->set_rules('firstname', 'Imię', 'required');
 			$this->form_validation->set_rules('lastname', 'Nazwisko', 'required');
@@ -38,7 +40,7 @@
         }
         public function accounts()
         {
-            $data['welcome'] = "To jest lista kont";
+            $data['title'] = "Lista kont";
             $data['accounts'] = $this->account_m->get_accounts();
             
             $this->render_page($this->directory_path, "accounts", $data);

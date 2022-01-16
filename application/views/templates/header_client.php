@@ -28,7 +28,11 @@
             infoWindow("<?php if (isset($info)) echo $info ?>");
         }
     </script>
-    <title>Wypożyczalnia samochodów</title>
+    <title>
+        <?php
+        echo $title;
+        ?>
+    </title>
 </head>
 
 <body onload=alertWindow()>

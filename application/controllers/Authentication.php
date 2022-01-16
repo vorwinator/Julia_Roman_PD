@@ -11,6 +11,7 @@
 
         public function logout()
         {
+            $data['title'] = "Wylogowanie";
             unset($_SESSION['login_id_acc']);
             unset($_SESSION['login_email']);
             unset($_SESSION['login_firstname']);
@@ -28,6 +29,7 @@
 
         
         public function login(){
+            $data['title'] = "Logowanie";
             if(isset($_SESSION['login_id_acc'])){
                 if($_SESSION['login_acc_type']==1){
                     redirect('admin/rent/index');
@@ -101,6 +103,7 @@
 
         public function sign_up()
         {
+            $data['title'] = "Rejestracja";
             $this->load->model('account_m');
 
             $this->form_validation->set_rules('email', 'Email', 'required|valid_email');

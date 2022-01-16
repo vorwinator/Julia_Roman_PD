@@ -10,10 +10,11 @@
         }
 
         public function create(){
+            $data['title'] = "Dodawanie nowej placówki";
+
             $this->form_validation->set_rules('address_city', 'Miasto', 'required');
             $this->form_validation->set_rules('address_street', 'Ulicę', 'required');
             $this->form_validation->set_rules('address_housenumber', 'Numer budynku', 'required');
-            // $this->form_validation->set_rules('address_apartmentnumber', 'Numer mieszkania', 'required');
             $this->form_validation->set_rules('address_postalcode', 'Kod pocztowy', 'required');
 			$this->form_validation->set_rules('type', 'Przeznaczenie placówki', 'required');
             
@@ -47,6 +48,7 @@
 
         public function crfs()
         {
+            $data['title'] = "Lista placówek";
             $data['crfs'] = $this->crf_m->get_crfs();
             if(isset($_GET['info']))$data['info']=$_GET['info'];
             
@@ -56,6 +58,7 @@
 
         public function delete()
         {
+            $data['title'] = "Usunięto placówkę";
             if($_GET['id_crf_delete'])$this->crf_m->delete($_GET['id_crf_delete']);
 
             $data['info'] = "Usunięto placówkę.";
@@ -67,6 +70,7 @@
 
         public function update()
         {
+            $data['title'] = "Edycja placówki";
             if(isset($_GET['info']))$data['info']=$_GET['info'];
             if(isset($_GET['id_crf_update']))$_SESSION['selected_crf_id']=$_GET['id_crf_update'];
             $data['crf']=$this->crf_m->get_crf_by_id($_SESSION['selected_crf_id']);

@@ -14,6 +14,7 @@
 
 
         public function index(){
+            $data['title'] = "Wynajem auta";
             if(isset($_GET['info']))$data['info']=$_GET['info'];
             if(isset($_GET['id_car_details']))$_SESSION['selected_car_id']=$_GET['id_car_details'];
             $data['car']=$this->car_m->get_car_by_id($_SESSION['selected_car_id']);
@@ -77,6 +78,7 @@
 
         public function accept()
         {
+            $data['title'] = "Podsumowanie";
             if(!isset($_POST['accept'])){
                 if(isset($_GET['price'])){
                     $data['price'] = $_GET['price'];
@@ -127,6 +129,7 @@
 
         public function rentals()
         {
+            $data['title'] = "Lista wynajmów";
             $data['rentals'] = $this->rental_m->get_user_rentals($_SESSION['login_id_acc']);
             $this->render_page($this->directory_path, "rentals", $data);
         }
@@ -134,6 +137,7 @@
 
         public function car_ride()
         {
+            $data['title'] = "Wynajem przejazdu";
             if (isset($_GET['info'])) $data['info'] = $_GET['info'];
             if (isset($_GET['id_car_details'])) $_SESSION['selected_car_id'] = $_GET['id_car_details'];
             $data['car'] = $this->car_m->get_car_by_id($_SESSION['selected_car_id']);

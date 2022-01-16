@@ -5,6 +5,7 @@
             parent::__construct();
         }
         public function index(){
+            $data['title'] = "Strona główna";
             if(isset($_GET['info'])){
                 $data['info']=$_GET['info'];
                 $this->render_page("pages/main/", "index", $data);

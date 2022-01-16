@@ -38,8 +38,6 @@
                     show_404();
             }
 
-            if(isset($data['title'])) $data['title'] = ucfirst($page); // Capitalize the first letter
-
             if(!isset($_SESSION['login_acc_type'])){
                 $this->load->view('templates/header_client', $data);
                 $this->load->view($full_path, $data);

@@ -66,7 +66,11 @@ echo site_url('admin/account');
             infoWindow("<?php if (isset($info)) echo $info ?>");
         }
     </script>
-    <title>Lista placówek - admin</title>
+    <title>
+        <?php
+        echo $title;
+        ?>
+    </title>
 </head>
 
 <body onload=alertWindow()>

@@ -10,6 +10,7 @@
         }
         public function crfs()
         {
+            $data['title'] = "Lista placówek";
             $data['crfs'] = $this->crf_m->get_crfs();
             if(isset($_GET['info']))$data['info']=$_GET['info'];
             

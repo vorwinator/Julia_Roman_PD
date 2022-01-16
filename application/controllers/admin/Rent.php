@@ -13,6 +13,7 @@ class Rent extends MY_Controller
 
     public function index()
     {
+        $data['title'] = "Lista wynajmów";
         $data['rentals'] = $this->rental_m->get_rentals();
         $this->render_page($this->directory_path, "index", $data);
     }
