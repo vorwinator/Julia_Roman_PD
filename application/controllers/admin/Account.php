@@ -8,11 +8,6 @@
             parent::__construct();
             $this->load->model('account_m');
         }
-        public function index(){
-            $data['welcome'] = "To jest domek";
-            
-            $this->render_page($this->directory_path, "index", $data);
-        }
 
         public function create(){
             $this->form_validation->set_rules('email', 'Email', 'required|valid_email');
