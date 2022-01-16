@@ -5,9 +5,12 @@
             parent::__construct();
         }
         public function index(){
-            if(isset($_GET['info']))$data['info']=$_GET['info'];
-            $data['welcome'] = "To jest domek";
-            
-            $this->render_page("pages/main/", "index", $data);
+            if(isset($_GET['info'])){
+                $data['info']=$_GET['info'];
+                $this->render_page("pages/main/", "index", $data);
+            }
+            else{
+                $this->render_page("pages/main/", "index", '');
+            }
         }
     }
