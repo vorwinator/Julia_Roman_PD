@@ -8,10 +8,7 @@
             $data['title'] = "Strona główna";
             if(isset($_GET['info'])){
                 $data['info']=$_GET['info'];
-                $this->render_page("pages/main/", "index", $data);
             }
-            else{
-                $this->render_page("pages/main/", "index", '');
-            }
+            $this->render_page("pages/main/", "index", $data);
         }
     }
