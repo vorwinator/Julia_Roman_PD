@@ -8,6 +8,8 @@
             $this->form_validation->set_message('integer', '{field} muszą być liczbą.');
             $this->form_validation->set_message('valid_email', 'To nie jest prawidłowy email.');
             $this->form_validation->set_message('matches', '{field} musi być takie samo jak {param}.');
+            $this->form_validation->set_message('min_length', 'Musisz wpisać przynajmniej {param} znaków.');
+            $this->form_validation->set_message('max_length', 'Musisz wpisać mniej niż {param} znaków.');
 
             if(str_contains(current_url(),'admin')){
                 if(!isset($_SESSION['login_acc_type'])){
