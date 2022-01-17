@@ -131,6 +131,7 @@
         {
             $data['title'] = "Lista wynajmów";
             $data['rentals'] = $this->rental_m->get_user_rentals($_SESSION['login_id_acc']);
+            $data['car_rides'] = $this->car_ride_m->get_user_car_rides($_SESSION['login_id_acc']);
             $this->render_page($this->directory_path, "rentals", $data);
         }
 
