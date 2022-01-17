@@ -1,7 +1,7 @@
 <?php
     class Crf extends MY_Controller{
 
-        public $directory_path = 'pages/client/crf/';
+        public $directory_path = 'pages/main/';
 
         public function __construct()
         {
