@@ -20,15 +20,20 @@
                     if($rental["rental_status"] == 1){
                         $this->rental_m->rental_status_off($rental['id_car']);
                     }
+                    else{
+                        $this->rental_m->rental_status_on($rental['id_car']);
+                        $this->rental_m->delete($rental['id_rental']);
+                    }
                 }
             }
 
             $car_rides = $this->car_ride_m->get_car_rides();
             if($car_rides!=null) foreach($car_rides as $car_ride){
                 $date = explode(" ", $car_ride['date']);
-                if($date[0] != date("Y-m-d")){
+                if($date[0] < date("Y-m-d")){
                     if($car_ride["rental_status"] == 1){
                         $this->car_ride_m->rental_status_off($car_ride['id_car']);
+                        $this->car_ride_m->delete($car_ride['id_car_ride']);
                     }
                 }
             }
