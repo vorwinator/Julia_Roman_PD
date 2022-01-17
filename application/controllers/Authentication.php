@@ -51,11 +51,8 @@
                     {
                         if(isset($_GET['info'])){
                             $data['info']=$_GET['info'];
-                            $this->load->view('templates/header_client', $data);
                         }
-                        else{
-                            $this->load->view('templates/header_client');
-                        }
+                        $this->load->view('templates/header_client', $data);
                         $this->load->view('pages/authentication/login');
                         $this->load->view('templates/footer_client');
                     }
