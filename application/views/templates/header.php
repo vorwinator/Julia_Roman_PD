@@ -76,7 +76,7 @@ echo site_url('admin/account');
 <body onload=alertWindow()>
     <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #4D4847;">
         <div class="container-fluid nav-container1">
-            <a class="navbar-brand mx-auto text-colour" href="index.html">
+            <a class="navbar-brand mx-auto text-colour" href="<?php echo site_url('admin/rent/index'); ?>">
                 <img src="https://getbootstrap.com/docs/4.1/assets/brand/bootstrap-solid.svg" width="30" height="30" alt="">
                 Firma roku
             </a>
