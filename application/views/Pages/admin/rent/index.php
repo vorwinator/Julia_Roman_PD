@@ -1,7 +1,8 @@
 <div class="container-fluid">
     <div class="col-md-8 col-lg-6 col-xl-4 offset-1 mx-auto">
-        <h1 class="big-header-style text-center">Lista wynajmów - admin</h1>
+        <h1 class="big-header-style text-center">Lista usług - admin</h1>
     </div>
+    <h3 class="small-header-style text-center">Wynajmy</h3>
     <table id="example" class="display">
         <thead>
             <tr>
@@ -67,7 +68,8 @@
             </tr>
         </tfoot>
     </table>
-    <table id="example" class="display">
+    <h3 class="small-header-style text-center">Przejazdy z kierowcą</h3>
+    <table id="example2" class="display">
         <thead>
             <tr>
                 <th>Id przejazdu</th>
