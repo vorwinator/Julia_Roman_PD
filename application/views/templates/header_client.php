@@ -17,6 +17,11 @@
         });
     </script>
     <script>
+        $(document).ready(function() {
+            $('#example2').DataTable();
+        });
+    </script>
+    <script>
         <?php if (isset($info)) { ?>
 
             function infoWindow(message) {
