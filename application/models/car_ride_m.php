@@ -72,4 +72,11 @@ class car_ride_m extends CI_Model
 
         return $respond;
     }
+
+
+    public function delete($id)
+    {
+        return $this->db->where('id_car_ride', $id)
+        ->delete('car_ride');
+    }
 }

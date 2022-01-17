@@ -81,4 +81,11 @@
 
             return $respond;
         }
+
+
+        public function delete($id)
+        {
+            return $this->db->where('id_rental', $id)
+            ->delete('rental');
+        }
     } 
