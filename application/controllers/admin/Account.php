@@ -15,14 +15,14 @@
             $this->form_validation->set_rules('email', 'Email', 'required|valid_email');
 			$this->form_validation->set_rules('firstname', 'Imię', 'required');
 			$this->form_validation->set_rules('lastname', 'Nazwisko', 'required');
-			$this->form_validation->set_rules('password', 'Hasło', 'required');
+			$this->form_validation->set_rules('password', 'Hasło', 'required|min_length[5]|max_length[21]');
 			$this->form_validation->set_rules('password2', 'Powtórz hasło', 'required|matches[password]');
             
             $this->unit->run($this->form_validation->run(), TRUE, 'Czy wstawiono poprawne dane do formularza tworzącego konto.');
 
 			if ($this->form_validation->run() === FALSE)
 			{
-                $this->render_page($this->directory_path, 'create', '');
+                $this->render_page($this->directory_path, 'create', $data);
 			}
 			else{
                 if($this->account_m->set_account()){
