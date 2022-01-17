@@ -41,6 +41,13 @@
             ->update('car');
         }
 
+        public function rental_status_off($id_car)
+        {
+            return $this->db->set('rental_status', 0)
+            ->where('id_car', $id_car)
+            ->update('car');
+        }
+
         public function get_user_rentals($id_acc)
         {
             $query = $this->db->select('*')
