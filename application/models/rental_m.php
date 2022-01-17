@@ -69,7 +69,8 @@
         {
             $query = $this->db->select('*')
             ->from('rental')
-            ->order_by('start_date')
+            ->join('car', 'car.id_car=rental.id_car')
+            ->order_by('rental.start_date')
             ->get();
 
             if ($query->num_rows() > 0) {
