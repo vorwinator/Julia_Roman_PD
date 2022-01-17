@@ -28,4 +28,11 @@ class car_ride_m extends CI_Model
         ->where('id_car', $id_car)
         ->update('car');
     }
+
+    public function rental_status_off($id_car)
+    {
+        return $this->db->set('rental_status', 0)
+        ->where('id_car', $id_car)
+        ->update('car');
+    }
 }
