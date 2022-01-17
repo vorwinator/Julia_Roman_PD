@@ -16,15 +16,20 @@
         {
             $rentals = $this->rental_m->get_rentals();
             if($rentals!=null) foreach($rentals as $rental){
-                if($rental['end_date'] > date("Y-m-d")){
-                    $this->rental_m->rental_status_off($rental['id_car']);
+                if($rental['end_date'] < date("Y-m-d")){
+                    if($rental["rental_status"] == 1){
+                        $this->rental_m->rental_status_off($rental['id_car']);
+                    }
                 }
             }
 
-            $car_rides = $this->rental_m->get_rentals();
+            $car_rides = $this->car_ride_m->get_car_rides();
             if($car_rides!=null) foreach($car_rides as $car_ride){
-                if($car_ride['date'] > date("Y-m-d")){
-                    $this->car_ride_m->rental_status_off($car_ride['id_car']);
+                $date = explode(" ", $car_ride['date']);
+                if($date[0] != date("Y-m-d")){
+                    if($car_ride["rental_status"] == 1){
+                        $this->car_ride_m->rental_status_off($car_ride['id_car']);
+                    }
                 }
             }
 
