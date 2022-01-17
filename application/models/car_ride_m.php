@@ -35,4 +35,22 @@ class car_ride_m extends CI_Model
         ->where('id_car', $id_car)
         ->update('car');
     }
+
+
+    public function get_car_rides()
+    {
+        $query = $this->db->select('*')
+        ->from('car_ride')
+        ->join('car', 'car.id_car=car_ride.id_car')
+        ->order_by('car_ride.date')
+        ->get();
+
+        if ($query->num_rows() > 0) {
+            $respond = $query->result_array();
+        } else {
+            $respond = FALSE;
+        }
+
+        return $respond;
+    }
 }
