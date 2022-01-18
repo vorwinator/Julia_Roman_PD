@@ -8,10 +8,12 @@
             <tr>
                 <th>Id wypożyczenia</th>
                 <th>Id klienta</th>
+                <th>Id samochodu</th>
                 <th>Cena za dzień</th>
                 <th>Cena za kilometr</th>
                 <th>Data zwrotu</th>
                 <th>Placówka zwrotu</th>
+                <th>Koszt</th>
                 <th></th>
             </tr>
         </thead>
@@ -32,12 +34,17 @@
                     </td>
                     <td>
                         <?php
-                        echo $rent['price_per_day']
+                        echo $rent['id_car']
                         ?>
                     </td>
                     <td>
                         <?php
-                        echo $rent['price_per_kilometer_with_chauffeur']
+                        echo $rent['price_per_day'] . "PLN";
+                        ?>
+                    </td>
+                    <td>
+                        <?php
+                        echo $rent['price_per_kilometer_with_chauffeur'] . "PLN";
                         ?>
                     </td>
                     <td>
@@ -48,6 +55,15 @@
                     <td>
                         <?php
                         echo $rent['return_to']
+                        ?>
+                    </td>
+                    <td>
+                        <?php
+                        $start = strtotime($rent['start_date']);
+                        $end = strtotime($rent['end_date']);
+                        $number_of_days = abs($start - $end) / 86400 + 1;
+                        $price = $number_of_days * $rent['price_per_day'];
+                        echo $price . "PLN";
                         ?>
                     </td>
                     <td>
@@ -62,10 +78,12 @@
             <tr>
                 <th>Id wypożyczenia</th>
                 <th>Id klienta</th>
+                <th>Id samochodu</th>
                 <th>Cena za dzień</th>
                 <th>Cena za kilometr</th>
                 <th>Data zwrotu</th>
                 <th>Placówka zwrotu</th>
+                <th>Koszt</th>
                 <th></th>
             </tr>
         </tfoot>
@@ -76,11 +94,13 @@
             <tr>
                 <th>Id przejazdu</th>
                 <th>Id klienta</th>
+                <th>Id samochodu</th>
                 <th>Cena za dzień</th>
                 <th>Cena za kilometr</th>
                 <th>Data przejazdu</th>
                 <th>Adres odbioru</th>
                 <th>Adres celu podróży</th>
+                <th>Koszt</th>
                 <th></th>
             </tr>
         </thead>
@@ -101,12 +121,17 @@
                     </td>
                     <td>
                         <?php
-                        echo $car_ride['price_per_day']
+                        echo $car_ride['id_car']
                         ?>
                     </td>
                     <td>
                         <?php
-                        echo $car_ride['price_per_kilometer_with_chauffeur']
+                        echo $car_ride['price_per_day'] . "PLN";
+                        ?>
+                    </td>
+                    <td>
+                        <?php
+                        echo $car_ride['price_per_kilometer_with_chauffeur'] . "PLN";
                         ?>
                     </td>
                     <td>
@@ -125,6 +150,12 @@
                         ?>
                     </td>
                     <td>
+                        <?php
+                        $price = $car_ride['price_per_kilometer_with_chauffeur'] * $car_ride['kilometers'];
+                        echo $price . "PLN";
+                        ?>
+                    </td>
+                    <td>
                         <a href=<?php echo site_url('admin/Rent/delete_car_ride?id_car_ride=' . $car_ride['id_car_ride'] . '&id_car=' . $car_ride['id_car']); ?> onclick="return confirm('Na pewno usunąć ten przejazd?')">
                             <button type="button" class="btn btn-danger btn-custom">Usuń</button>
                         </a>
@@ -136,11 +167,13 @@
             <tr>
                 <th>Id przejazdu</th>
                 <th>Id klienta</th>
+                <th>Id samochodu</th>
                 <th>Cena za dzień</th>
                 <th>Cena za kilometr</th>
                 <th>Data przejazdu</th>
                 <th>Adres odbioru</th>
                 <th>Adres celu podróży</th>
+                <th>Koszt</th>
                 <th></th>
             </tr>
         </tfoot>
