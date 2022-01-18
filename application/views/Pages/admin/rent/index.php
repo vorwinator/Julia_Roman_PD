@@ -51,7 +51,9 @@
                         ?>
                     </td>
                     <td>
-                        <button type="button" class="btn btn-danger btn-custom">Usuń</button>
+                        <a href=<?php echo site_url('admin/Rent/delete_rent?id_rental=' . $rent['id_rental'] . '&id_car=' . $rent['id_car']); ?> onclick="return confirm('Na pewno usunąć ten wynajem?')">
+                            <button type="button" class="btn btn-danger btn-custom">Usuń</button>
+                        </a>
                     </td>
                 </tr>
             <?php } ?>
@@ -123,7 +125,9 @@
                         ?>
                     </td>
                     <td>
-                        <button type="button" class="btn btn-danger btn-custom">Usuń</button>
+                        <a href=<?php echo site_url('admin/Rent/delete_car_ride?id_car_ride=' . $car_ride['id_car_ride'] . '&id_car=' . $car_ride['id_car']); ?> onclick="return confirm('Na pewno usunąć ten przejazd?')">
+                            <button type="button" class="btn btn-danger btn-custom">Usuń</button>
+                        </a>
                     </td>
                 </tr>
             <?php } ?>
