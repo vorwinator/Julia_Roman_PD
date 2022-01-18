@@ -12,18 +12,21 @@
                     $pic = explode(' ', $rental['pictures']);
                     $src = base_url() . "/" . "assets/pictures/" . $rental['brand'] . "/" . $rental['model'] . "/" . $pic[0];
                     ?>
-                    <div class="col-md-8 text-center" style="font-weight: bold;"><img width="100%" src="<?php echo $src; ?>" onerror="this.onerror=null;this.src=' <?php echo base_url(); ?>/assets/check.jpg';">
+                    <div class="col-md-5 text-center" style="font-weight: bold;"><img width="100%" src="<?php echo $src; ?>" onerror="this.onerror=null;this.src=' <?php echo base_url(); ?>/assets/check.jpg';">
                         <?php
-                        echo $rental['brand'] . " " . $rental['model'];
+                        echo "<br>" . $rental['brand'] . " " . $rental['model'];
                         ?>
                     </div>
-                    <div class="col-md-4 ">
+                    <div class="col-md-7">
                         <ul>
                             <li>
                                 Początek: <b><?php echo $rental['start_date']; ?></b>
                             </li>
                             <li>
                                 Zakończenie: <b><?php echo $rental['end_date']; ?></b>
+                            </li>
+                            <li>
+                                Zwrot do: <b><?php echo $rental['return_to']; ?></b>
                             </li>
                         </ul>
                     </div>
@@ -43,15 +46,18 @@
                     $pic = explode(' ', $car_ride['pictures']);
                     $src = base_url() . "/" . "assets/pictures/" . $car_ride['brand'] . "/" . $car_ride['model'] . "/" . $pic[0];
                     ?>
-                    <div class="col-md-8 text-center" style="font-weight: bold;"><img width="100%" src="<?php echo $src; ?>" onerror="this.onerror=null;this.src=' <?php echo base_url(); ?>/assets/check.jpg';">
+                    <div class="col-md-5 text-center" style="font-weight: bold;"><img width="100%" src="<?php echo $src; ?>" onerror="this.onerror=null;this.src=' <?php echo base_url(); ?>/assets/check.jpg';">
                         <?php
-                        echo $car_ride['brand'] . " " . $car_ride['model'];
+                        echo "<br>" . $car_ride['brand'] . " " . $car_ride['model'];
                         ?>
                     </div>
-                    <div class="col-md-4 ">
+                    <div class="col-md-7">
                         <ul>
                             <li>
                                 Dzień przejazdu: <b><?php echo $car_ride['date']; ?></b>
+                            </li>
+                            <li>
+                                Adres startowy: <b><?php echo $car_ride['start_address']; ?></b>
                             </li>
                             <li>
                                 Adres docelowy: <b><?php echo $car_ride['finish_address']; ?></b>

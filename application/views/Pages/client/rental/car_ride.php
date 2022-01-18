@@ -94,7 +94,7 @@
                 <div class="form-floating mb-3">
                     <?php
                     echo form_input('start_address_street', set_value('start_address_street'), 'class="form-control form-control-lg" placeholder="Ulica"');
-                    echo form_label('Ulica', 'start_address_street');
+                    echo form_label('Ulica i numer budynku', 'start_address_street');
                     ?>
                 </div>
                 <div class="error-message-style">
