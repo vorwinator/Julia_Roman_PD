@@ -1,6 +1,5 @@
 <div class="container-fluid d-flex justify-content-center">
     <div class="col-md-8 col-lg-6 col-xl-6 offset-1">
-        <!-- <form class="col-lg-10 pd-bottom"> -->
         <?php
         echo form_open(current_url(), 'class="col-lg-10 pd-bottom"');
         ?>
@@ -9,10 +8,6 @@
             <h3 class="small-header-style text-center">Typ placówki</h3>
             <div class="col-md-12">
                 <div class="form-floating mb-3">
-                    <!-- <select class="col-md-12 form-control-lg">
-                        <option>Odbiór</option>
-                        <option>Zwrot</option>
-                    </select> -->
                     <?php
                     $type_options = array(
                         'Odbiór' => 'Odbiór',

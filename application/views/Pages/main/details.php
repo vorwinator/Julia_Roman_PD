@@ -1,13 +1,4 @@
 <div class="container-fluid">
-        <div class="pd-bread">
-                <nav aria-label="breadcrumb">
-                        <ol class="breadcrumb">
-                                <li class="breadcrumb-item"><a href="index.html">Strona główna</a></li>
-                                <li class="breadcrumb-item"><a href="klient-listasamo.html">Lista samochodów</a></li>
-                                <li class="breadcrumb-item active" aria-current="page">Toyota Yaris 123</li>
-                        </ol>
-                </nav>
-        </div>
         <div class="row car-select">
                 <div class="col-md-6 d-flex justify-content-center">
                         <div id="carouselExampleIndicators" class="carousel carousel-car slide" data-bs-ride="carousel">
