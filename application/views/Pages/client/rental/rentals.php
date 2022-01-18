@@ -1,6 +1,6 @@
 <div class="container-fluid">
     <div class="col-md-8 col-lg-6 col-xl-4 offset-1 mx-auto">
-        <h1 class="big-header-style text-center">Lista wynajmów - klient</h1>
+        <h1 class="big-header-style text-center">Lista usług - klient</h1>
     </div>
     <?php
     if($rentals!=null)foreach ($rentals as $rental) {

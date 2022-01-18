@@ -88,7 +88,7 @@
                     </div>
                 </div>
                 <div class="col-xs-12 text-center pd-top">
-                    <a class="btn btn-outline-primary single-button-style" role="button" href=<?php echo site_url('client/rental/rentals'); ?>>Lista wynajmów</a>
+                    <a class="btn btn-outline-primary single-button-style" role="button" href=<?php echo site_url('client/rental/rentals'); ?>>Moje usługi</a>
                 </div>
             </div>
         </div>
