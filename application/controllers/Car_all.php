@@ -19,9 +19,6 @@
                 if($rental['end_date'] < date("Y-m-d")){
                     if($rental["rental_status"] == 1){
                         $this->rental_m->rental_status_off($rental['id_car']);
-                    }
-                    else{
-                        $this->rental_m->rental_status_on($rental['id_car']);
                         $this->rental_m->delete($rental['id_rental']);
                     }
                 }
