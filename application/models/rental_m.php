@@ -52,6 +52,8 @@
         {
             $query = $this->db->select('*')
             ->from('rental')
+            ->join('car', 'car.id_car=rental.id_car')
+            ->join('car_details', 'car_details.id_car=car.id_car')
             ->where('id_acc', $id_acc)
             ->order_by('start_date')
             ->get();

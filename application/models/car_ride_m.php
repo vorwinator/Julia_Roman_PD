@@ -60,6 +60,7 @@ class car_ride_m extends CI_Model
         $query = $this->db->select('*')
         ->from('car_ride')
         ->join('car', 'car.id_car=car_ride.id_car')
+        ->join('car_details', 'car_details.id_car=car.id_car')
         ->order_by('car_ride.date')
         ->where('car_ride.id_acc', $id_acc)
         ->get();
