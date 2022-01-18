@@ -27,7 +27,7 @@
                     'Zwrot',
                     'Oba'
                 );
-                $this->render_page($this->directory_path, 'create', '');
+                $this->render_page($this->directory_path, 'create', $data);
 
 			}
 			else{

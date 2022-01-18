@@ -36,7 +36,7 @@
 
 			if ($this->form_validation->run() === FALSE)
 			{
-                $this->render_page($this->directory_path, 'create', '');
+                $this->render_page($this->directory_path, 'create', $data);
 			}
 			else{
                 if($_FILES['pictures']['name'][0] != null){

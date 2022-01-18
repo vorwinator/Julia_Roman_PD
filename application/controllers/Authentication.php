@@ -113,7 +113,7 @@
 
 			if ($this->form_validation->run() === FALSE)
 			{
-                $this->load->view('templates/header');
+                $this->load->view('templates/header', $data);
                 $this->load->view('pages/authentication/sign_up');
                 $this->load->view('templates/footer');
 			}
@@ -121,14 +121,14 @@
                 if($this->account_m->set_account()){
                     $data['info']="Konto utworzone. Zaloguj się.";
 
-                    $this->load->view('templates/header');
+                    $this->load->view('templates/header', $data);
                     $this->load->view('pages/authentication/login');
                     $this->load->view('templates/footer');
                 } 
                 else{
                     $data['info']="Niepowodzenie";
 
-                    $this->load->view('templates/header');
+                    $this->load->view('templates/header', $data);
                     $this->load->view('pages/authentication/sign_up', $data);
                     $this->load->view('templates/footer');
                 }
