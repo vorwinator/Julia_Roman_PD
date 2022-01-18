@@ -15,7 +15,8 @@
             echo $address_explode[1] ." ". $address_explode[2] ."<br>".
             $address_explode[3] ." ". $address_explode[0] ."<br>
             tel: 000 000 000<br>
-            email: car@net.com";
+            email: car@net.com<br>";
+            echo $crf_purpose;
             ?>
         </div>
         <?php } ?>
