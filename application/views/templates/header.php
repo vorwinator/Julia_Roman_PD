@@ -60,7 +60,7 @@
                     <a class="nav-link text-colour" href=<?php echo site_url('admin/car_rental_facility/crfs'); ?>>Placówki</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-colour" href=<?php echo site_url('admin/rent/index'); ?>>Wynajmy</a>
+                    <a class="nav-link text-colour" href=<?php echo site_url('admin/rent/index'); ?>>Usługi</a>
                 </li>
                 <li class="nav-item">
                     <?php
