@@ -13,7 +13,7 @@
                 <th>Model</th>
                 <th>Rok produkcji</th>
                 <th>Cena za dobę</th>
-                <th>Przebieg w km</th>
+                <th>Cena za km</th>
                 <th>Czy wypożyczony</th>
                 <th>Zdjęcie</th>
                 <th></th>
@@ -51,7 +51,7 @@
                     </td>
                     <td>
                         <?php
-                        echo $car['mileage']
+                        echo $car['price_per_kilometer_with_chauffeur']
                         ?>
                     </td>
                     <td>
@@ -81,7 +81,7 @@
                 <th>Model</th>
                 <th>Rok produkcji</th>
                 <th>Cena za dobę</th>
-                <th>Przebieg w km</th>
+                <th>Cena za km</th>
                 <th>Czy wypożyczony</th>
                 <th>Zdjęcie</th>
                 <th></th>

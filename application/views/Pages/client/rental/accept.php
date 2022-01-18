@@ -3,7 +3,7 @@
             <?php
             echo form_open(current_url(), 'class="col-lg-10 pd-kaucja"');
             ?>
-            <h1 class="big-header-style text-center">Potwierdzenie wynajmu</h1>
+            <h1 class="big-header-style text-center">Potwierdzenie</h1>
             <div class="row">
                 <div class="etykieta">Wybrany termin</div>
                 <div class="col-md-12 border text-center">

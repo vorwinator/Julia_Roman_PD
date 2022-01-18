@@ -13,7 +13,7 @@
             $('#example').DataTable();
         });
     </script>
-        <script>
+    <script>
         $(document).ready(function() {
             $('#example2').DataTable();
         });
