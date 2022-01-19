@@ -61,38 +61,46 @@
                         $this->load->model('authentication_m');
                         $pass=$this->authentication_m->check_password($this->input->post('email'));
 
-                        $this->unit->run($pass->password!=md5($this->input->post('password')), FALSE, 'Czy podano prawidłowe hasło.');
-    
-                        if($pass->password!=md5($this->input->post('password'))){
-                            $data['info']="Podano nieprawidłowe dane logowania";
+                        if($pass != false){
+                            $this->unit->run($pass->password!=md5($this->input->post('password')), FALSE, 'Czy podano prawidłowe hasło.');
+        
+                            if($pass->password!=md5($this->input->post('password'))){
+                                $data['info']="Podano nieprawidłowe dane logowania";
+
+                                $this->load->view('templates/header_client', $data);
+                                $this->load->view('pages/authentication/login');
+                                $this->load->view('templates/footer_client');
+                            }
+                            else{
+                                $account=$this->authentication_m->get_acc_by_email($this->input->post('email'));
+
+                                $_SESSION['login_id_acc']=$account->id_acc;
+                                $_SESSION['login_email']=$account->email;
+                                $_SESSION['login_firstname']=$account->firstname;
+                                $_SESSION['login_lastname']=$account->lastname;
+                                $_SESSION['login_acc_type']=$account->acc_type;
+
+                                if($_SESSION['login_acc_type']==null){
+                                    $data['info']="Wystąpił niespodziewany błąd.";
+                                    redirect('main/index');
+                                }
+
+                                if($_SESSION['login_acc_type']==1)
+                                {
+                                    redirect('admin/rent/index');
+                                }
+                                else{
+                                    redirect('main/index');
+                                }
+                            }
+                        }
+                        else{
+                            $data['info'] = "Podano nieprawidłowe dane logowania";
 
                             $this->load->view('templates/header_client', $data);
                             $this->load->view('pages/authentication/login');
                             $this->load->view('templates/footer_client');
                         }
-                        else{
-                            $account=$this->authentication_m->get_acc_by_email($this->input->post('email'));
-
-                            $_SESSION['login_id_acc']=$account->id_acc;
-                            $_SESSION['login_email']=$account->email;
-                            $_SESSION['login_firstname']=$account->firstname;
-                            $_SESSION['login_lastname']=$account->lastname;
-                            $_SESSION['login_acc_type']=$account->acc_type;
-
-                            if($_SESSION['login_acc_type']==null){
-                                $data['info']="Wystąpił niespodziewany błąd.";
-                                redirect('main/index');
-                            }
-
-                            if($_SESSION['login_acc_type']==1)
-                            {
-                                redirect('admin/rent/index');
-                            }
-                            else{
-                                redirect('main/index');
-                            }
-                        }
-                        
                     }
             }
         }
