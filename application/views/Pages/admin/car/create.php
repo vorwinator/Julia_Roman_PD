@@ -52,8 +52,8 @@
                 </div>
                 <div class="form-floating mb-3">
                     <?php
-                    echo form_input('price_per_day', set_value('price_per_day'), 'class="form-control form-control-lg" placeholder="Cena za dobę"');
-                    echo form_label('Cena za dobę', 'price_per_day');
+                    echo form_input('price_per_day', set_value('price_per_day'), 'class="form-control form-control-lg" placeholder="Cena za dobę (zł)"');
+                    echo form_label('Cena za dobę (zł)', 'price_per_day');
                     ?>
                     <div class="error-message-style">
                         <?php
@@ -63,8 +63,8 @@
                 </div>
                 <div class="form-floating mb-3">
                     <?php
-                    echo form_input('price_per_kilometer_with_chauffeur', set_value('price_per_kilometer_with_chauffeur'), 'class="form-control form-control-lg" placeholder="Cena za km"');
-                    echo form_label('Cena za km', 'price_per_kilometer_with_chauffeur');
+                    echo form_input('price_per_kilometer_with_chauffeur', set_value('price_per_kilometer_with_chauffeur'), 'class="form-control form-control-lg" placeholder="Cena za km (zł)"');
+                    echo form_label('Cena za km (zł)', 'price_per_kilometer_with_chauffeur');
                     ?>
                     <div class="error-message-style">
                         <?php
@@ -74,8 +74,8 @@
                 </div>
                 <div class="form-floating mb-3">
                     <?php
-                    echo form_input('average_consumption', set_value('average_consumption'), 'class="form-control form-control-lg" placeholder="Średnie spalanie"');
-                    echo form_label('Średnie spalanie', 'average_consumption');
+                    echo form_input('average_consumption', set_value('average_consumption'), 'class="form-control form-control-lg" placeholder="Średnie spalanie (l/100km)"');
+                    echo form_label('Średnie spalanie (l/100km)', 'average_consumption');
                     ?>
                     <div class="error-message-style">
                         <?php
@@ -164,8 +164,8 @@
                 </div>
                 <div class="form-floating mb-3">
                     <?php
-                    echo form_input('trunk_capacity', set_value('trunk_capacity'), 'class="form-control form-control-lg" placeholder="Pojemność bagażnika"');
-                    echo form_label('Pojemność bagażnika', 'trunk_capacity');
+                    echo form_input('trunk_capacity', set_value('trunk_capacity'), 'class="form-control form-control-lg" placeholder="Pojemność bagażnika (l)"');
+                    echo form_label('Pojemność bagażnika (l)', 'trunk_capacity');
                     ?>
                     <div class="error-message-style">
                         <?php
@@ -175,8 +175,8 @@
                 </div>
                 <div class="form-floating mb-3">
                     <?php
-                    echo form_input('deposit', set_value('deposit'), 'class="form-control form-control-lg" placeholder="Kaucja"');
-                    echo form_label('Kaucja', 'deposit');
+                    echo form_input('deposit', set_value('deposit'), 'class="form-control form-control-lg" placeholder="Kaucja (zł)"');
+                    echo form_label('Kaucja (zł)', 'deposit');
                     ?>
                     <div class="error-message-style">
                         <?php

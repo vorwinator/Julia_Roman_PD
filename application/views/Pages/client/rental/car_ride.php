@@ -16,33 +16,37 @@
                 <div class="col-md-6">
                     <ul>
                         <li>
-                            <b>Klimatyzacja</b>
-                        </li>
-                        <li>
                             <b>
                                 <?php
-                                echo $car['number_of_doors'];
+                                echo "Klimatyzacja: " . $car['air_conditioning'];
                                 ?>
                             </b>
                         </li>
                         <li>
                             <b>
                                 <?php
-                                echo $car['number_of_seats'];
+                                echo $car['number_of_doors'] . "-drzwiowy";
                                 ?>
                             </b>
                         </li>
                         <li>
                             <b>
                                 <?php
-                                echo $car['gearbox'];
+                                echo $car['number_of_seats'] . "-osobowy";
                                 ?>
                             </b>
                         </li>
                         <li>
                             <b>
                                 <?php
-                                echo $car['fuel'];
+                                echo "Skrzynia biegów: " . $car['gearbox'];
+                                ?>
+                            </b>
+                        </li>
+                        <li>
+                            <b>
+                                <?php
+                                echo "Paliwo: " . $car['fuel'];
                                 ?>
                             </b>
                         </li>

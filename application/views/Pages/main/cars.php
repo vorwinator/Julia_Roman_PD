@@ -26,7 +26,7 @@
                                         <div class="col-sm">
                                             <div>
                                                 <?php
-                                                echo "• " . $car['air_conditioning']
+                                                echo "• Klimatyzacja: " . $car['air_conditioning']
                                                 ?>
                                             </div>
                                             <div>
@@ -36,14 +36,14 @@
                                             </div>
                                             <div>
                                                 <?php
-                                                echo "• " . $car['fuel']
+                                                echo "• Paliwo: " . $car['fuel']
                                                 ?>
                                             </div>
                                         </div>
                                         <div class="col-sm">
                                             <div>
                                                 <?php
-                                                echo "• " . $car['drive']
+                                                echo "• Napęd: " . $car['drive']
                                                 ?>
                                             </div>
                                             <div>
